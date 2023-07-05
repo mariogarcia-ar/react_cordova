@@ -1,0 +1,373 @@
+{
+  "quizzes": [
+    {
+      "station_id": "01",
+      "id": "q2023_01",
+      "title": "Cuestionario de la estacion 01",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 1,
+          "question": "1-La nueva Ranger brinda una inigualable capacidad de vadeo de hasta 800mm circulando hasta 4km/h",
+          "options": [
+            {
+              "id": "a",
+              "text": "VERDADERO",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "FALSO",
+              "correct": true
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": "La nueva Ranger brinda una inigualable capacidad de vadeo de hasta 800mm circulando hasta 7km/h, junto a la Ranger Raptor que brinda hasta 850mm circulando hasta 7km/h ofrecen la mayor capacidad de vadeo del segmento."
+        }
+      ]
+    },
+    {
+      "station_id": "02",
+      "id": "q2023_02",
+      "title": "Cuestionario de la estacion 02",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 2,
+          "question": "2-Todas las versiones de la nueva Ranger cuentan con un panel de instrumentos LED de 8' 100% digital a color",
+          "options": [
+            {
+              "id": "a",
+              "text": "VERDADERO",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "FALSO",
+              "correct": true
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": "Las versiones XL hasta la LTD inclusive cuentan con un panel de instrumentos LED de 8' digitial a color, mientras que la versión LTD+ cuenta con un panel de instrumentos LED de 12,4' a color, ambas ofrecen un mayor nivel de personalización e información."
+        }
+      ]
+    },
+    {
+      "station_id": "04",
+      "id": "q2023_04",
+      "title": "Cuestionario de la estacion 04",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 4,
+          "question": "8-El sistema de gestion de terrenos de la nueva Ranger cuento con el modo de conducción Normal, Eco, Remolcar / Arrastrar, Resbaladizo, Lodo / Surcos y Arena",
+          "options": [
+            {
+              "id": "a",
+              "text": "VERDADERO",
+              "correct": true
+            },
+            {
+              "id": "b",
+              "text": "FALSO",
+              "correct": false
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": "Correcto, para seleccionar los distintos modos de conducción tenés que girar el comando giratorio, ubicado en el mismo panel de control principal."
+        }
+      ]
+    },
+    {
+      "station_id": "05",
+      "id": "q2023_05",
+      "title": "Cuestionario de la estacion 05",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 5,
+          "question": "9-Cuando el control crucero adaptativo con Stop & Go esta activado, en caso de que el automovil de adelante se dentenga por completo, la nueva Ranger se dententra por completo y si el tráfico renueva su marcha dentro de los primeros 3 segundos, la nueva Ranger acelerará automáticamente.",
+          "options": [
+            {
+              "id": "a",
+              "text": "VERDADERO",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "FALSO",
+              "correct": true
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": "Correcto, recorda que podrás desactivar el Control de velocidad Crucero Adaptativo a través de SYNC® 4, presionando en el menú de opciones ubicado en la pantalla, luego Asistencia al Conductor y, por último, en Control de Velocidad Crucero, seleccionando la opción Normal."
+        }
+      ]
+    },
+    {
+      "station_id": "06",
+      "id": "q2023_06",
+      "title": "Cuestionario de la estacion 06",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 6,
+          "question": "11-Las principales caracteristicas que ofrece el nuevo navegador off-road / pantalla todoterreno son:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Sólo estará disponible para la versión LTD+",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "Ofrece activar / desactivar el bloqueo del diferencia trasero, los sensores delanteros y el control de descenso.",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "Estará disponible para la versión LTD y LTD+",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "Brinda información sobre la inclinación del vehículo y volante",
+              "correct": false
+            },
+            {
+              "id": "e",
+              "text": "La A y la C son correctas.",
+              "correct": false
+            },
+            {
+              "id": "f",
+              "text": "La B, C y D son correctas.",
+              "correct": true
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": null
+        }
+      ]
+    },
+    {
+      "station_id": "07",
+      "id": "q2023_07",
+      "title": "Cuestionario de la estacion 07",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 7,
+          "question": "14-La nueva Ranger, ofrece Ford Copilot 360, el sistema de asistencias a la conducción más completo de la industria, a continuación algunos de las asistencias que equipa:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Control de Velocidad Crucero Adaptativo con Stop&Go  y Sistema de Centrado de Carril (sólo en LTD+)",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "Sensor y cámara trasera (desde su versión XLS en adelante)",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "Control electrónico de descenso (sólo en 4x4 y 4WD)",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "Limitador de velocidad (en todas sus versiones)",
+              "correct": false
+            },
+            {
+              "id": "e",
+              "text": "Asistencia de frenado en reversa (sólo en LTD+)",
+              "correct": false
+            },
+            {
+              "id": "f",
+              "text": "Todas son correctas",
+              "correct": true
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": null
+        }
+      ]
+    },
+    {
+      "station_id": "08",
+      "id": "q2023_08",
+      "title": "Cuestionario de la estacion 08",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 8,
+          "question": "15-Las principales caracteristicas del sistema de gestión de terrenos que equipa la nueva Ranger son:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Dependiendo del modo de conducción elegido, la nueva Ranger seleccionará automáticamente la opción de tracción entre 4x2, 4x4 alta y 4x4 baja, además de activar el bloqueo del diferencial trasero y apagar el control de tracción.",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "Las versiones XLS V6 y XLT 4x4 contarán con 4 modos de conducción: Normal, Eco, Remolcar / Arrastrar y Resbaladizo",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "Sólo la versión LTD+ contará con 6 modos de conducción: Normal, Eco, Remolcar / Arrastrar, Resbaladizo, Lodo / Surcos y Arena.",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "Las versiones LTD y LTD+ contarán con 6 modos de conducción: Normal, Eco, Remolcar / Arrastrar, Resbaladizo, Lodo / Surcos y Arena.",
+              "correct": false
+            },
+            {
+              "id": "e",
+              "text": "La A, B y C son correctas.",
+              "correct": false
+            },
+            {
+              "id": "f",
+              "text": "La A, B y D son correctas.",
+              "correct": true
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": null
+        },
+        { 
+          "id": 2,
+          "question": "9-Cuando el control crucero adaptativo con Stop & Go esta activado, en caso de que el automovil de adelante se dentenga por completo, la nueva Ranger se dententra por completo y si el tráfico renueva su marcha dentro de los primeros 3 segundos, la nueva Ranger acelerará automáticamente.", 
+          "options":[
+          {"id":"a" , "text": "VERDADERO", "correct":false},
+          {"id":"b" , "text": "FALSO", "correct":true}
+          ],
+          "order": 2, "current": false, "answer": null, "score": 10, "correct": null,
+          "help": "Correcto, recorda que podrás desactivar el Control de velocidad Crucero Adaptativo a través de SYNC® 4, presionando en el menú de opciones ubicado en la pantalla, luego Asistencia al Conductor y, por último, en Control de Velocidad Crucero, seleccionando la opción Normal."
+      }        
+      ]
+    },
+    {
+      "station_id": "10",
+      "id": "q2023_10",
+      "title": "Cuestionario de la estacion 10",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 10,
+          "question": "19-El control crucero con Stop & Go y sistema de centrado de carril disponible en la versión LTD+ posee algunas de las siguientes carácteristicas de funcionamiento:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Si detecta un vehículo que está circulando más lento, automáticamente reduce la velocidad. Cuando el carril está libre, vuelve a la velocidad previamente programada.",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "En caso de que el vehículo de adelante frene por completo, la nueva Ranger disminuirá la velocidad por completo y se desactivará el control crucero instanteneamente. ",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "Al presionar el pedal del freno, se desactivará el control de velocidad crucero adaptativo",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "Para definir la velocidad de crucero, deberás acelerar a la velocidad deseada y presionar el botón SET+ o SET– ubicados en el volante.",
+              "correct": false
+            },
+            {
+              "id": "e",
+              "text": "La A, C y D son correctas.",
+              "correct": true
+            },
+            {
+              "id": "f",
+              "text": "Todas son correctas",
+              "correct": false
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": null
+        }
+      ]
+    },
+    {
+      "station_id": "11",
+      "id": "q2023_11",
+      "title": "Cuestionario de la estacion 11",
+      "timer": null,
+      "finished": false,
+      "questions": [
+        {
+          "id": 1,
+          "question": "1-La nueva Ranger brinda una inigualable capacidad de vadeo de hasta 800mm circulando hasta 4km/h",
+          "options": [
+            {
+              "id": "a",
+              "text": "VERDADERO",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "FALSO",
+              "correct": true
+            }
+          ],
+          "order": 1,
+          "current": false,
+          "answer": null,
+          "score": 10,
+          "correct": null,
+          "help": "La nueva Ranger brinda una inigualable capacidad de vadeo de hasta 800mm circulando hasta 7km/h, junto a la Ranger Raptor que brinda hasta 850mm circulando hasta 7km/h ofrecen la mayor capacidad de vadeo del segmento."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+    "app":{
+      "title": "un titulo de la aplicacion"
+    },
+    "users": [
+        {"stars_id": "001234", "name": "Mario", "lastname": "Garcia", "dealership": "Concesionaria Rosario"},
+        {"stars_id": "001235", "name": "Graciela", "lastname": "Rios", "dealership": "Concesionaria San Lorenzo"},
+        {"stars_id": "001236", "name": "Juan", "lastname": "Perez", "dealership": "Concesionaria Funes"},
+
+        {"stars_id": "001237", "name": "User01", "lastname": "Test", "dealership": "Concesionaria Test"},
+        {"stars_id": "001238", "name": "User02", "lastname": "Test", "dealership": "Concesionaria Test"},
+        {"stars_id": "001239", "name": "User03", "lastname": "Test", "dealership": "Concesionaria Test"}
+
+    ],
+    
+    "team": [
+        {"stars_id": "001234", "name": "Mario", "lastname": "Garcia", "dealership": "Concesionaria Rosario"},
+        {"stars_id": "001235", "name": "Graciela", "lastname": "Rios", "dealership": "Concesionaria San Lorenzo"},
+        {"stars_id": "001236", "name": "Juan", "lastname": "Perez", "dealership": "Concesionaria Funes"}
+    ],
+
+    "pages": [
+      {"id": "home", "subpages":[
+          {"class":"subPageImage", "id": "home_01", "title": "", "subtitle": "", "text": "", "type":"image", "url": "/pages/home/slider_1.jpg"}
+      ]}
+    ],
+
+    "stations":[
+        {"order":1, "title":"Estacion 1 [order3] - Diseño Interior", "current":false, "completed": false, "id": "01", "picture": "/stations/station01/estacion_1.jpg", "materials": [
+                                    {"order":2, "active":false, "title": "Presentacion 01","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "video", "url": "/stations/station01/video01_01.mp4"},
+                                    {"order":3, "active":false, "title": "Ficha Tecnica","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "pdf", "url": "/stations/station01/pdf01_02.pdf"},
+                                    {"order":1, "active":false, "title": "Seguridad Activa","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "image", "url": "/stations/station01/image01_03.jpg"},
+                                    {"order":4, "active":false, "title": "Seguridad Pasiva","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "image", "url": "/stations/station01/image01_04.png"}
+                                    ]},
+        {"order": 3, "title":"Estacion 2 [order1] - Diseño Exterior", "current":false, "completed": false, "id": "02", "picture": "/stations/station02/estacion_2.jpg", "materials": [
+                                    {"order":1, "active":false, "title": "Presentacion 02","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "video", "url": "/stations/station02/video02_01.mp4"},
+                                    {"order":2, "active":false, "title": "Ficha Tecnica 02","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "pdf", "url": "/stations/station02/pdf02_02.pdf"}
+                                    ]}   ,
+        {"order":2, "title":"Estacion 3 [order2] - Motor", "current":false, "completed": false, "id": "03", "picture": "/stations/station03/estacion_3.jpg", "materials": [
+                                    {"order":1, "active":false, "title": "Presentacion 03","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "video", "url": "/stations/station03/video03_01.mp4"},
+                                    {"order":2, "active":false, "title": "Ficha Tecnica 03","subtitle":"subitullllo", "text":"fsdfa sdfasdfas", "type": "pdf", "url": "/stations/station03/pdf03_02.pdf"}
+                                    ]}                                    
+    ],
+
+    "instructors": [
+        {"stars_id": "01", "name": "Instructor 01", "lastname": "FordAcademy"},
+        {"stars_id": "02", "name": "Instructor 02", "lastname": "FordAcademy"},
+        {"stars_id": "03", "name": "Instructor 03", "lastname": "FordAcademy"},
+        {"stars_id": "04", "name": "Instructor 04", "lastname": "FordAcademy"},
+        {"stars_id": "05", "name": "Instructor 05", "lastname": "FordAcademy"},
+        {"stars_id": "06", "name": "Instructor 06", "lastname": "FordAcademy"},
+        {"stars_id": "07", "name": "Instructor 07", "lastname": "FordAcademy"},
+        {"stars_id": "08", "name": "Instructor 08", "lastname": "FordAcademy"},
+        {"stars_id": "09", "name": "Instructor 09", "lastname": "FordAcademy"},
+        {"stars_id": "10", "name": "Instructor 10", "lastname": "FordAcademy"},
+        {"stars_id": "11", "name": "Instructor 11", "lastname": "FordAcademy"},
+        {"stars_id": "12", "name": "Instructor 12", "lastname": "FordAcademy"},
+        {"stars_id": "13", "name": "Instructor 13", "lastname": "FordAcademy"},
+        {"stars_id": "14", "name": "Instructor 14", "lastname": "FordAcademy"},
+        {"stars_id": "15", "name": "Instructor 15", "lastname": "FordAcademy"},
+        {"stars_id": "16", "name": "Instructor 16", "lastname": "FordAcademy"},
+        {"stars_id": "17", "name": "Instructor 17", "lastname": "FordAcademy"},
+        {"stars_id": "18", "name": "Instructor 18", "lastname": "FordAcademy"},
+        {"stars_id": "19", "name": "Instructor 19", "lastname": "FordAcademy"},
+        {"stars_id": "20", "name": "Instructor 20", "lastname": "FordAcademy"}
+    ],
+
+    "quizzes": [
+      {
+        "station_id":"01", "id": "q202301", "title": "Cuestionario Final", "timer":null, "finished":false,
+        "questions": [
+            { 
+              "id": 1,
+              "question": "¿ 1er 4order Que cilindrada tiene el motor de la nueva ranger?", 
+              "options":[
+                {"id":"a" , "text": "3.4lts bi-turbo", "correct":true},
+                {"id":"b" , "text": "2.5lts bi-turbo", "correct":false},
+                {"id":"c" , "text": "3.8lts bi-turbo", "correct":false},
+                {"id":"d" , "text": "2.9lts bi-turbo", "correct":false}
+              ],
+              "order": 4, "current": false, "answer": null, "score": 10, "correct": null,
+              "help": "Es de 3.4 lts bi-turbo"
+            },
+            { 
+              "id": 2, 
+              "question": "¿ 2da 3order colores disponibles?", 
+              "options":[
+                {"id":"a" , "text": "plateado", "correct":false},
+                {"id":"b" , "text": "rojo", "correct":true},
+                {"id":"c" , "text": "azul", "correct":false},
+                {"id":"d" , "text": "verde", "correct":false}
+              ],
+              "order": 3, "current": false, "answer": null, "score": 11, "correct": null,
+              "help": "Es de rojo"
+            },
+            { 
+              "id": 3, 
+              "question": "¿3er 2order precios disponibles?", 
+              "options":[
+                {"id":"a" , "text": "estandar", "correct":false},
+                {"id":"b" , "text": "bajo", "correct":false},
+                {"id":"c" , "text": "premium", "correct":true},
+                {"id":"d" , "text": "super", "correct":false}
+              ],
+              "order": 2, "current": false, "answer": null, "score": 12, "correct": null,
+              "help": "Es de premiun"
+            },
+            { 
+              "id": 4, 
+              "question": "¿ 4ta 1order años disponibles?", 
+              "options":[
+                {"id":"a" , "text": "2015 años", "correct":false},
+                {"id":"b" , "text": "2016 años", "correct":false},
+                {"id":"c" , "text": "2017 años", "correct":false},
+                {"id":"d" , "text": "2018 años", "correct":true}
+              ],
+              "order": 1, "current": false, "answer": null, "score": 13, "correct": null,
+              "help": "Es de 2018 años"
+            }
+          ]
+    },
+    {
+      "station_id":"03", "id": "q202302", "title": "Q2 -> Cuestionario Final", "timer":null, "finished":false,
+      "questions": [
+          { 
+            "id": 1,
+            "question": "Q2 -> ¿ 1er 4order Que cilindrada tiene el motor de la nueva ranger?", 
+            "options":[
+              {"id":"a" , "text": "Q2 -> 3.4lts bi-turbo", "correct":true},
+              {"id":"b" , "text": "Q2 -> 2.5lts bi-turbo", "correct":false},
+              {"id":"c" , "text": "Q2 -> 3.8lts bi-turbo", "correct":false},
+              {"id":"d" , "text": "Q2 -> 2.9lts bi-turbo", "correct":false}
+            ],
+            "order": 4, "current": false, "answer": null, "score": 10, "correct": null,
+            "help": "Es de 3.4 lts bi-turbo"
+          },
+          { 
+            "id": 2, 
+            "question": "Q2 -> ¿ 2da 3order colores disponibles?", 
+            "options":[
+              {"id":"a" , "text": "Q2 -> plateado", "correct":false},
+              {"id":"b" , "text": "Q2 -> rojo", "correct":true},
+              {"id":"c" , "text": "Q2 -> azul", "correct":false},
+              {"id":"d" , "text": "Q2 -> verde", "correct":false}
+            ],
+            "order": 3, "current": false, "answer": null, "score": 11, "correct": null,
+            "help": "Es de rojo"
+          },
+          { 
+            "id": 3, 
+            "question": "Q2 -> ¿3er 2order precios disponibles?", 
+            "options":[
+              {"id":"a" , "text": "Q2 -> estandar", "correct":false},
+              {"id":"b" , "text": "Q2 -> bajo", "correct":false},
+              {"id":"c" , "text": "Q2 -> premium", "correct":true},
+              {"id":"d" , "text": "Q2 -> super", "correct":false}
+            ],
+            "order": 2, "current": false, "answer": null, "score": 12, "correct": null,
+            "help": "Es de premiun"
+          },
+          { 
+            "id": 4, 
+            "question": "Q2 -> ¿ 4ta 1order años disponibles?", 
+            "options":[
+              {"id":"a" , "text": "Q2 -> 2015 años", "correct":false},
+              {"id":"b" , "text": "Q2 -> 2016 años", "correct":false},
+              {"id":"c" , "text": "Q2 -> 2017 años", "correct":false},
+              {"id":"d" , "text": "Q2 -> 2018 años", "correct":true}
+            ],
+            "order": 1, "current": false, "answer": null, "score": 13, "correct": null,
+            "help": "Es de 2018 años"
+          }
+        ]
+    }      
+    ]
+}
