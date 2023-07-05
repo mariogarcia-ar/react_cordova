@@ -32,3 +32,40 @@ cordova platform remove android && cordova platform add android
 
 cordova run android
 ```
+
+# integration
+- una vez creado la interacion base
+- copiamos del proyecto tablet src y public 
+- ahora hay que corregi
+
+mkdir src/static
+cp -r public/fonts src/static/
+cp -r public/img src/static/
+cp -r public/pages src/static/
+cp -r public/stations src/static/
+
+// corregir los ccs imagens
+
+buscar  dentro de src
+    url('
+cambiar
+    url('./static
+
+url\((.+)\)
+url('$1')
+
+url\(('')(.+)('')\)
+url('$2')
+
+url('/
+url('./static/
+
+// corregirlos otros por nivel 
+../../../static
+
+// correr el error de 
+url: _geturl('action'),
+url: _geturl(action),
+
+npm install
+npm start
