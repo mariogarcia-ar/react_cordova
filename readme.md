@@ -22,6 +22,7 @@ cordova run android
 # Run
 
 ```bash
+npm install 
 cordova platform remove android && cordova platform add android
 
 cordova run android
