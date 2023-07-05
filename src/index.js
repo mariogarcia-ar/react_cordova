@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'
+import App from './App.jsx'
+import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { HashRouter } from 'react-router-dom';
+
 
 const renderReactDom = () => {
   ReactDOM.render(
-    <React.StrictMode>
+    <HashRouter basename='/'>
       <App />
-    </React.StrictMode>,
+    </HashRouter>,
     document.getElementById('root')
   );
 }
@@ -20,9 +21,3 @@ if (window.cordova) {
 } else {
   renderReactDom();
 }
-
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,3 +1,8 @@
+# Migration CRA to Vite
+https://www.asserts.ai/blog/migrataion-react-cra-vitejs/
+
+https://github.com/facebook/create-react-app/issues/10022
+
 # Tutorial
 https://blog.devgenius.io/convert-your-react-application-to-an-andriod-ios-app-using-cordova-87646729c2b7
 
