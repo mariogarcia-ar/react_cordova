@@ -1,0 +1,60 @@
+.substations-nav{
+    position: absolute!important;
+    z-index: 1000;
+    right: 1.25rem;
+    bottom: 1.25rem;
+}
+.substations-nav button {
+    padding: 0.6em 5em;
+    font-size: 16px;
+    font-family: 'Ford Antenna Bold';
+}
+/*
+.substations .carousel-caption {
+    right: auto;
+    left:1.25rem;
+    text-align: left;
+}
+.substations .carousel-caption.top {
+    top:1.25rem;
+    bottom: auto;
+}
+.substations .carousel-caption.bottom {
+    bottom:4.25rem;
+    top: auto;
+}
+.substations .carousel-caption .substations-title{
+    color: white!important;
+    font-family: 'Ford Antenna Bold';
+    margin: 0;
+    font-size: 48px;
+}
+.substations .carousel-caption .substations-title .blue {
+    color:#2e4c72 !important;
+}
+.substations .carousel-caption .substations-subtitle{
+    color: white!important;
+    font-family: 'Ford Antenna Light';
+    margin: 0 !important;
+    padding: 0;
+    font-size: 36px !important;
+}
+.substations .carousel-caption .substations-subtitle strong {
+    font-family: 'Ford Antenna Bold';
+}
+.substations .carousel-caption p {
+    font-family: 'Ford Antenna Regular';
+    font-size: 20px;
+    border-top:2px solid #a6edff;
+    padding-top:30px;
+    margin-top: 30px;
+    xmax-width: 36%;
+}
+.substations .carousel-caption p strong {
+    color:#a6edff;
+    font-style: normal;
+    font-family: 'Ford Antenna Bold';
+}
+.substations .carousel-caption ol li {
+    padding: 10px;
+} */

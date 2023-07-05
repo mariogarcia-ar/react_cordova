@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'Ford Antenna Extra Light';
+    src: url('./static/fonts/Ford-Antenna-Extra-Light.eot');
+    src: url('./static/fonts/Ford-Antenna-Extra-Light.eot?#iefix') format('embedded-opentype'),
+        url('./static/fonts/Ford-Antenna-Extra-Light.woff2') format('woff2'),
+        url('./static/fonts/Ford-Antenna-Extra-Light.woff') format('woff'),
+        url('./static/fonts/Ford-Antenna-Extra-Light.ttf') format('truetype'),
+        url('./static/fonts/Ford-Antenna-Extra-Light.svg#Munged-AJDyRvnLe6') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Ford Antenna Light';
+    src: url('./static/fonts/Ford-Antenna-Light.eot');
+    src: url('./static/fonts/Ford-Antenna-Light.eot?#iefix') format('embedded-opentype'),
+        url('./static/fonts/Ford-Antenna-Light.woff2') format('woff2'),
+        url('./static/fonts/Ford-Antenna-Light.woff') format('woff'),
+        url('./static/fonts/Ford-Antenna-Light.ttf') format('truetype'),
+        url('./static/fonts/Ford-Antenna-Light.svg#Munged-AJDyRvnLe6') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Ford Antenna Regular';
+    src: url('./static/fonts/Ford-Antenna-Regular.eot');
+    src: url('./static/fonts/Ford-Antenna-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./static/fonts/Ford-Antenna-Regular.woff2') format('woff2'),
+        url('./static/fonts/Ford-Antenna-Regular.woff') format('woff'),
+        url('./static/fonts/Ford-Antenna-Regular.ttf') format('truetype'),
+        url('./static/fonts/Ford-Antenna-Regular.svg#Munged-AJDyRvnLe6') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Ford Antenna Bold';
+    src: url('./static/fonts/Ford-Antenna-Bold.eot');
+    src: url('./static/fonts/Ford-Antenna-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./static/fonts/Ford-Antenna-Bold.woff2') format('woff2'),
+        url('./static/fonts/Ford-Antenna-Bold.woff') format('woff'),
+        url('./static/fonts/Ford-Antenna-Bold.ttf') format('truetype'),
+        url('./static/fonts/Ford-Antenna-Bold.svg#Munged-AJDyRvnLe6') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --primary: #1592cc;
+    --secondary: #02085c;
+    --dark-blue:#1b394e;
+    --dark:#414141;
+    --grey:#e5e5e5;
+    --bs-body-font-family: 'Ford Antenna Regular';
+}
+html, body {
+    overflow: hidden;
+    background-image: url('./static/img/main_bg.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    border-bottom: 10px solid #0076C5;
+}
+body, table {
+    font-family: var(--bs-body-font-family) !important;
+  
+}
+xbody {
+    border-bottom: 10px solid var(--secondary);
+}
+button {
+    margin: 10px auto;
+    font-family: 'Ford Antenna Regular';
+    border-radius: 0 !important;
+    font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary {
+    background-color: var(--primary) !important;
 }

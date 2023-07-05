@@ -1,0 +1,38 @@
+
+#pdfviewer-wrapper{
+    max-width: 1275px !important;
+    width: 1300px; /*configurable*/
+    height: 700px; /*configurable*/
+    overflow: auto;
+    border:1px solid #333;
+    position: relative;
+}
+    #pdfviewer-nav{
+        background: #eee;
+        border-bottom: 1px solid #eee;
+        height: 40px;
+    }
+
+    #pdfviewer-wrapper #pdfviewer-container{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+        #pdfviewer-container {
+            position: absolute;
+            width: 100%;
+            height:  calc(100% - 40px);
+            overflow: auto; 
+            background: #333;
+            text-align: center;
+            border: solid 3px #555;
+        }
+            #pdfviewer-page{
+                background: white;
+                width: calc(280px * 4); /*configurable*/
+                height: calc(220px * 2.5); /*configurable*/
+                margin-top: 10px !important;
+                margin-bottom: 10px !important;
+            }

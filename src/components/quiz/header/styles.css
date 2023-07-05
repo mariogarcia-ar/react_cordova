@@ -1,0 +1,32 @@
+.quiz-header-container {
+    position: relative;
+}
+.quiz-header-container .progress {
+    border-radius: 0 !important ;
+    max-width: calc(100% - 60px);
+}
+.quiz-header-container .progress .progress-bar{
+    background-color: var(--primary);
+}
+
+
+.quiz-header-container .countdown {
+    position: absolute;
+    right: 10px;
+    top: 12%;
+    background-color: var(--grey);
+    padding: 10px 14px;
+    color:var(--secondary);
+    font-family: 'Ford Antenna Bold';
+    font-size: 20px;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+}
+.quiz-header-container .countdown small {
+    font-size: 80%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    font-family: 'Ford Antenna Regular';
+}

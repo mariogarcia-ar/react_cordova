@@ -1,0 +1,128 @@
+/* .subcontent-nav{
+    position: absolute!important;
+    z-index: 1000;
+    right: 1.25rem;
+    bottom: 1.25rem;
+}
+.subcontent-nav button {
+    padding: 0.6em 5em;
+    font-size: 16px;
+    font-family: 'Ford Antenna Bold';
+}
+.subcontent .carousel-caption {
+    right: auto;
+    left:1.25rem;
+    text-align: left;
+}
+*/
+.subcontent .carousel-caption.top {
+    top:1.25rem;
+    bottom: auto;
+}
+.subcontent .carousel-caption.bottom {
+    bottom:4.25rem !important;
+    top: auto !important;
+    height: auto;
+}
+
+.subcontent .carousel-caption .subcontent-title{
+    color: white!important;
+    font-family: 'Ford Antenna Bold';
+    margin: 0;
+    font-size: 48px;
+}
+.subcontent .carousel-caption .subcontent-title .light {
+    font-family: 'Ford Antenna Regular';
+}
+.subcontent .carousel-caption .text-shadow {
+    text-shadow: 2px 4px 2.28px rgba(0, 0, 0, 0.93);
+}
+.subcontent .carousel-caption .subcontent-title .blue {
+    color:#2e4c72 !important;
+}
+.subcontent .carousel-caption .subcontent-subtitle{
+    color: white!important;
+    font-family: 'Ford Antenna Light';
+    margin: 0 !important;
+    padding: 0;
+    font-size: 30px !important;
+}
+.subcontent .carousel-caption .subcontent-subtitle strong {
+    font-family: 'Ford Antenna Bold';
+}
+.subcontent .tpl-default,
+.subcontent .tpl-izq {
+    text-align: left;
+    left: 0;
+    top: 0 !important;
+    padding: 2em;
+    max-width: 42%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.subcontent .tpl-izq.small {
+    max-width: 34%;
+}
+.subcontent .tpl-default {
+    max-width: 100%;
+}
+.subcontent .tpl-der {
+    text-align: left;
+    right: 0;
+    left: auto;
+    top: 0 !important;
+    padding: 2em;
+    max-width: 36%;
+    height: 100%;
+    overflow-y: scroll;
+
+}
+.subcontent .sombra {
+    background-image: url('../../static/img/tpl_sombra.png');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+.subcontent .tpl-der,
+.subcontent .blue {
+    background-image: url('../../static/img/tpl_blue.png');
+    background-repeat: repeat-x;
+    background-size: auto;
+    
+}
+.subcontent .carousel-caption div,
+.subcontent .carousel-caption xp {
+    font-family: 'Ford Antenna Regular';
+    font-size: 18px;
+
+}
+.subcontent .carousel-caption .subcontent-text,
+.subcontent .carousel-caption xp {
+    border-top:2px solid var(--primary);
+    padding-top:30px;
+    margin-top: 30px;
+}
+.subcontent .carousel-caption.sin-titulo .subcontent-text,
+.subcontent .carousel-caption .subcontent-text.sin-titulo {
+    border:none;
+    padding-top:0px;
+    margin-top: 0px;
+}
+.subcontent .carousel-caption .subcontent-text strong,
+.subcontent .carousel-caption xp strong {
+    color:#a6edff;
+    font-style: normal;
+    font-family: 'Ford Antenna Bold';
+}
+.subcontent .carousel-caption ol li {
+    padding: 10px;
+} 
+
+.subcontent ol > li::marker {
+    font-weight: bolder;
+}
+
+#StationCheckPage .form-label {
+    color:#fff;
+    font-family: 'Ford Antenna Bold';
+    font-size: 18px;
+}

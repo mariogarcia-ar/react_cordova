@@ -1,0 +1,10 @@
+.videoplayer-fit{
+    /* object-fit: fill!important; */
+    height: calc(100vh - 90px);
+    
+}
+    
+.video-player-wrapper{
+    background-color: var(--secondary);
+    text-align: center;
+}

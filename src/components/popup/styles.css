@@ -1,0 +1,36 @@
+.popup-more-info{
+    position: absolute;
+    top: 2em;
+    right: 10px;
+    z-index: 999;
+}
+
+.popup .modal-content{
+    background-color: rgba(44,70,107,0.91);
+    color: white!important;
+}
+
+.popup .modal-header {
+    border-bottom:2px solid #a6edff;
+}
+
+.popup .btn-close{
+    filter: invert(1);
+    opacity: 1;
+    color: white!important;
+    /* --bs-btn-close-color: white!important;
+    --bs-btn-close-bg:white!important; */
+}
+.popup .popup-text {
+    font-family: 'Ford Antenna Light';
+    font-size: 18px;
+    overflow: scroll;
+}
+.popup .popup-text .blue {
+    color: #1592cc;
+    font-family: 'Ford Antenna Bold';
+}
+.popup .popup-title {
+    font-family: 'Ford Antenna Regular';
+    font-size: 28px;
+}

@@ -1,0 +1,56 @@
+.station-dashboard-content-container xbutton { /*borrar ???*/
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    background-color: var(--primary) !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+
+
+.station-dashboard-content-container,
+.station-dashboard-content-container .row-nav  {
+    height: 100%;
+} 
+.station-dashboard-content-container .row-nav  .col-nav:first-child,
+.station-dashboard-content-container .row-nav  .col-nav:last-of-type{
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 92%;
+}
+.station-dashboard-content-container .row-nav  .col-nav {
+    padding: 0 20px;
+}
+.station-dashboard-content-container .row-nav  .col-nav:first-child,
+.station-dashboard-content-container .row-nav  .col-nav:last-of-type {
+    width: 4%;
+         
+}
+.station-dashboard-content-container .row-nav  .col-nav:last-of-type img {
+    transform: rotate(180deg);
+}
+
+.station-dashboard-content-container  h4 {
+    color:var(--primary);
+    display: block;
+    width: 100%;
+    font-family: 'Ford Antenna Bold';
+    margin-bottom: 20px;
+
+}
+.station-dashboard-content-container {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.station-dashboard-content-container .pdf-viewer{
+height: 600px;
+}
+
+.station-dashboard-content-container .pdf-viewer video{
+    width: 100%;
+} 

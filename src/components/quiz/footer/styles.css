@@ -1,0 +1,43 @@
+
+.quiz-footer-container {
+    width: 100%;
+    bottom: 9px !important;
+}
+@media (min-width:1279px) {
+    .quiz-footer-container {
+        
+    }
+}
+.quiz-footer-container .row {
+    align-items: center;
+}
+.quiz-footer-container .col {
+    background-color: var(--dark-blue);
+    color:#fff;
+    font-family: 'Ford Antenna Bold';
+    text-transform: uppercase;
+    position: relative;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-footer-container .col.quiz-end  span {
+    border: 3px solid #fff;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    margin: 6px;
+    padding: 6px 16px;
+
+}
+.quiz-footer-container .col img {
+    max-width: 20px;
+    margin-right: 10px;
+}
+.quiz-footer-container .quiz-prev {
+    transform: rotate(180deg);
+}

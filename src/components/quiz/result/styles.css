@@ -1,0 +1,75 @@
+
+.quiz-result-container h2 {
+    color:var(--primary);
+    padding: 2vw;
+    font-family: 'Ford Antenna Bold';
+    text-align: center;
+}
+.quiz-result-container .row_results {
+    padding: 30px 0;
+}
+.quiz-result-container .row_results .col:first-child{
+    text-align: right;
+    position: relative;
+    border-right: 1px solid var(--grey);
+    overflow: hidden;
+}
+.quiz-result-container .row_results .col:last-of-type {
+    text-align: left;
+}
+
+.quiz-result-container .profile_pic {
+    max-width: 150px;
+    margin-bottom: 30px;
+}
+
+.quiz-result-container .view_answer_page {
+    text-align: center;
+    font-family: 'Ford Antenna Regular';
+    color:var(--primary);
+    font-size: 18px;
+}
+.quiz-result-container .row_results {
+    color:var(--primary);
+    font-size: 28px;
+    font-family: 'Ford Antenna Bold';
+}
+.quiz-result-container .row_results sub {
+    font-family: 'Ford Antenna Regular';
+    bottom: 0;
+}
+
+.quiz-result-container .quiz-answers{
+    margin-top: 20px;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid  var(--primary);
+    text-align: left;
+    padding: 10px 0 0 0;
+}
+
+.quiz-result-container .quiz-answers li{
+    position: relative;
+    list-style: none;
+    padding-left: 35px;
+}
+.quiz-result-container .quiz-answers li:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top:4px;
+    left: 0px;
+    z-index: 10;
+}
+.quiz-result-container .quiz-answers .answer-item-correct:before {
+    background-image: url('../../../static/img/item_correct.png');
+
+}
+.quiz-result-container .quiz-answers .answer-item-incorrect:before {
+    background-image: url('../../../static/img/item_incorrect.png');
+}
+.quiz-result-container .quiz-answers li p{
+    color: var(--secondary);
+}

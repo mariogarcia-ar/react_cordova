@@ -1,0 +1,14 @@
+.station-check{
+    font-family: 'Ford Antenna Regular';
+    height: 100vh;
+    background-image: url('../../static/pages/logout/logout_01.jpg');
+}
+.station-check-form {
+    position: absolute;
+    left:50%; top:50%;
+    transform: translate(-50%, -50%);
+    width: 40% !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding:30px;
+}

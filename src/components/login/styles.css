@@ -1,0 +1,114 @@
+.members-container  .user_container {
+    font-family: 'Ford Antenna Regular';
+    background-color: transparent;
+    font-size: 14px !important;
+    color:#000;
+    padding: 0;
+    border: 0 !important;
+    background-color: transparent !important;
+    margin: 20px 0;
+}
+.members-container  .user_container .card-body {
+    padding: 0;
+}
+.members-container  .user_container .card-body .row {
+    margin: 10px 0;
+}
+.members-container  .user_container .card-body .row .col {
+    padding-right: 5px;
+}
+.members-container  .user_container .card-body .row .col:last-of-type {
+    padding-right: 0;
+    padding-left: 5px;
+}
+.members-container  .user_container input:hover,
+.members-container  .user_container input:focus,
+.members-container  .user_container input {
+    border:3px solid var(--primary) !important;
+    color:var(--primary);
+    font-family: 'Ford Antenna Regular';
+    padding: 10px 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    border-radius: 0 !important;
+}
+.members-container  .user_container input::placeholder {
+    font-family: 'Ford Antenna Regular';
+    color:var(--primary);
+}
+
+.members-container  .user_container label h2,
+.members-container  .user_container label h3 {
+    font-size: 16px !important;
+    color:var(--primary) !important;
+    margin: 14px 0;
+    padding: 0;
+}
+.members-container  .user_container label.active * {
+    color:green !important
+}
+.members-container  .user_container label h2 {
+    font-family: 'Ford Antenna Bold';
+}
+.members-container  .user_container img {
+    max-width: 30%;
+    margin: 0 auto 20px;
+}
+.members-container  .user_container button {
+    font-family: 'Ford Antenna Regular';
+    border-radius: 0;
+    width: 100%;
+    font-size: 14px;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+.members-container  .user_container button.btn-primary {
+    background-color: var(--primary);
+    font-family: 'Ford Antenna Regular';
+    border-radius: 0;
+    width: 100%;
+    font-size: 14px;
+}
+.members-container  .user_container button.btn-primary:hover {
+   background-color: var(--secondary); 
+}
+.members-container  .user_container button.btn-danger {
+    background-color: #dc3545 !important;
+}
+.members-container .main-button-container {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.members-container .main-button-container .main-button {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+
+}
+#LogoutPage,
+.LogoutPage-content {
+    height: 100vh;
+    
+}
+#LogoutPage {
+    background-image: url('../../static/pages/logout/logout.jpg');
+    background-position: center bottom;
+}
+#LogoutPage .LogoutPage-content {
+    padding: 4% 0;
+}
+#LogoutPage .LogoutPage-content h1 {
+    font-family: 'Ford Antenna Bold';
+    color:#fff;
+}

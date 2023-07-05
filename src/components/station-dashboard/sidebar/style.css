@@ -1,0 +1,113 @@
+/*--- material -------------------*/
+
+.station-sidebar-material-containers {
+    height: calc(64vh - 70px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.station-sidebar-material-containers .row,
+.station-sidebar-material-containers .col {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;   
+}
+
+
+.station-sidebar-material-containers  .list-group {
+    border-radius: 0 !important;
+    border-top:3px;
+    border-bottom: 3px;
+    border-left:0;
+    border-right: 3px;
+    border-style: solid;
+    border-color: #9c9b9b;
+    height: 100%;
+
+}
+.station-sidebar-material-containers  .list-group  .list-group-item {
+    border:0;
+    background-color: transparent;
+    border-radius: 0;
+    color: var(--primary);
+    font-size: 20px;
+    font-family: 'Ford Antenna Bold';
+    border-bottom: 2px solid #9c9b9b;
+    padding-left: 80px;
+    position: relative;
+    padding: 16px 16px 16px 80px;
+}
+.station-sidebar-material-containers  .list-group  .list-group-item.active {
+    background-color: var(--primary);
+    color: #fff;
+}
+.station-sidebar-material-containers  .list-group  .list-group-item::before {
+    content: "";
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.station-sidebar-material-containers  .list-group  .list-group-item.video::before {
+    background-image: url('./static/img/icon_video.png')
+}
+.station-sidebar-material-containers  .list-group  .list-group-item.pdf::before {
+    background-image: url('./static/img/icon_pdf.png')
+}
+
+
+
+/*---verificacion------------------*/
+
+.station-sidebar-verification-containers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #9c9b9b;
+    height: 218px;
+    margin-top: 20px;
+;
+}
+.station-sidebar-verification-containers .col {
+    padding: 20px;
+}
+.station-sidebar-verification-containers form label {
+    width: 100%;
+    font-family: 'Ford Antenna Bold';
+    color:#000;
+    font-size: 18px;
+    text-align: center;
+}
+.station-sidebar-verification-containers form button {
+    position: relative;
+    left:auto;
+    right: auto;
+    bottom: auto;
+    top:auto;
+    width: 100%;
+    font-family: 'Ford Antenna Bold';
+}
+
+.station-sidebar-verification-containers form input:hover,
+.station-sidebar-verification-containers form input:focus,
+.station-sidebar-verification-containers form input {
+    border:3px solid var(--primary) !important;
+    color:var(--primary);
+    font-family: 'Ford Antenna Regular';
+    padding: 10px 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    border-radius: 0 !important;
+    margin-bottom: 10px;
+}
+.station-sidebar-verification-containers form input::placeholder {
+    font-family: 'Ford Antenna Regular';
+    color:var(--primary);
+}
+
