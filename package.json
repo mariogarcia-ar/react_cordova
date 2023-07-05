@@ -1,14 +1,14 @@
 {
   "homepage": "./",
-  "name": "io.cordova.hellocordova",
-  "displayName": "HelloCordova",
+  "name": "p703.fordacademy.com.ar",
+  "displayName": "Ford Academy",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "FORD P703 Streaming y Evento",
   "main": "index.js",
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "Apache Cordova Team",
+  "author": "Garcia Mario <mariogarcia.ar@gmail.com>",
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
