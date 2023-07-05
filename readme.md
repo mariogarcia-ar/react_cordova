@@ -69,3 +69,8 @@ url: _geturl(action),
 
 npm install
 npm start
+
+
+// run android
+rm -rf platforms && cordova platform add android
+cordova run android
