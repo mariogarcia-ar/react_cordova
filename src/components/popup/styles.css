@@ -1,7 +1,7 @@
 .popup-more-info{
     position: absolute;
     top: 2em;
-    right: 10px;
+    right: 0px;
     z-index: 999;
 }
 
@@ -25,6 +25,7 @@
     font-family: 'Ford Antenna Light';
     font-size: 18px;
     overflow: scroll;
+    padding-bottom: 60px;
 }
 .popup .popup-text .blue {
     color: #1592cc;
