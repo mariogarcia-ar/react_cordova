@@ -15,7 +15,7 @@
     <allow-intent href="https://*/*" />
 
 <platform name="android">
-    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splash.png" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
 </platform>
 
 </widget>
