@@ -74,3 +74,8 @@ npm start
 // run android
 rm -rf platforms && cordova platform add android
 cordova run android
+
+
+# icons - splash
+https://www.npmjs.com/package/cordova-res
+cordova-res android
