@@ -2,6 +2,9 @@
 <widget id="p703.fordacademy.com.ar" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <hook type="before_prepare" src="scripts/prebuild.js"/>
     <preference name="Orientation" value="landscape" />
+    <preference name = "SplashScreen" value = "screen" />
+    <preference name = "SplashMaintainAspectRatio" value = "true" />
+
     <name> P703 FORD Academy</name>
     <description>FORD P703 Streaming y Evento</description>
     <author email="mariogarcia.ar@gmail.com" href="https://www.linkedin.com/in/mariogarciaar/">
@@ -10,4 +13,9 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+<platform name="android">
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splash.png" />
+</platform>
+
 </widget>
