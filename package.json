@@ -1,7 +1,7 @@
 {
   "homepage": "./",
   "name": "p703.fordacademy.com.ar",
-  "displayName": "Ford Academy",
+  "displayName": "FORD Academy",
   "version": "1.0.0",
   "description": "FORD P703 Streaming y Evento",
   "main": "index.js",
@@ -63,6 +63,7 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
     "cordova-android": "^12.0.0",
+    "cordova-plugin-splashscreen": "^6.0.1",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -73,6 +74,9 @@
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-splashscreen": {}
+    }
   }
 }
