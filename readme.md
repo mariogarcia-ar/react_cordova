@@ -38,6 +38,7 @@ cordova run android
 - copiamos del proyecto tablet src y public 
 - ahora hay que corregi
 
+rm -rf src/static
 mkdir src/static
 cp -r public/fonts src/static/
 cp -r public/img src/static/
