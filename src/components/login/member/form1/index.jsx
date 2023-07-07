@@ -1,10 +1,12 @@
 import { Button, Card, CardImg, Container, Form, FormLabel, Col, Row } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
-import { useUser } from '../../../../hooks/useUser';
+import { useApp } from '../../../../hooks/useApp';
+// import { useUser } from '../../../../hooks/useUser';
 
 function MemberForm1({position, member, setMember}) {
     const {register, handleSubmit, formState:{errors}} = useForm({reValidateMode: "onSubmit"});
-    const {getUserByStarsId} = useUser();
+    // const {getUserByStarsId} = useUser();
+    const {getUserByStarsId} = useApp();
     
     const validate_stars_id = async (value) =>{
       let _user = await getUserByStarsId(value);

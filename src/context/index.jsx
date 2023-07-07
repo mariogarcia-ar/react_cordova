@@ -19,6 +19,7 @@ function AppContextProvider({children}){
     const [jid, setJid] = useState(42)
     const [aid, setAid] = useState(92)
     const [fecha, setFecha] = useState('sin-fecha')
+    const [users, setUsers] = useState(0); // users counts
     
     // Add a request interceptor
     axios.interceptors.request.use(function (config) {
@@ -54,6 +55,7 @@ function AppContextProvider({children}){
         jid, setJid,
         aid, setAid,
         fecha, setFecha,
+        users, setUsers,
     }} >
         <PagesContextProvider>
         <TeamContextProvider>
