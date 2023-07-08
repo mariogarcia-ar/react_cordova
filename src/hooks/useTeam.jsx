@@ -10,15 +10,16 @@ export const useTeam = () =>{
         return !!context.isReady;
     }
 
-    const initApiData = async (setIsReady) => { 
+    const initApiData = async (setIsReady, setIsTeamReady) => { 
         console.log('useTeam: initApiData')
-
+        setIsTeamReady(false);
         // const response = await fetch('../../assets/data.json').then(res => res.json());
         // setTeam(response.team);
         setIsReady(true);
     }
 
-    const resetApiData = (setTeam)=>{
+    const resetApiData = (setTeam,setIsTeamReady)=>{
+        initApiData(setTeam,setIsTeamReady);
         setTeam([]);
     }
 

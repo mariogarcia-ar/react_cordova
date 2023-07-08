@@ -2,7 +2,7 @@
   "stations": [
     {
       "id": "01",
-      "title": "MISIÓN 1 [s01-o6]",
+      "title": "MISIÓN 1",
       "order": 3,"current": false,"completed": false, 
       "subpages":[
         {
@@ -23,7 +23,7 @@
 
     {
       "id": "02",
-      "title": "MISIÓN 2 [s02-o7]",
+      "title": "MISIÓN 2",
       "picture": "/stations/station02/slider_2_01.jpg",
       "order": 2,"current": false,"completed": false, 
       "subpages":[
@@ -52,7 +52,7 @@
 
     {
       "id": "03",
-      "title": "MISIÓN 3 [s03-o8]",
+      "title": "MISIÓN 3",
       "picture": "/stations/station03/slider_3_01.jpg",
       "order": 1,"current": false,"completed": false, 
       "subpages":[
@@ -73,7 +73,7 @@
     
     {
       "id": "04",
-      "title": "MISIÓN 4 [s04-o9]",
+      "title": "MISIÓN 4",
       "picture": "/stations/station04/slider_4_01.jpg",
       "order": 4,"current": false,"completed": false, 
       "subpages":[
@@ -94,7 +94,7 @@
 
     {
       "id": "05",
-      "title": "MISIÓN 5 [s05-o10]",
+      "title": "MISIÓN 5",
       "picture": "/stations/station05/slider_5_01.jpg",
       "order": 5,"current": false,"completed": false, 
       "subpages":[
@@ -119,7 +119,7 @@
 
     {
       "id": "06",
-      "title": "MISIÓN 6 [s06-o11]",
+      "title": "MISIÓN 6",
       "picture": "/stations/station06/slider_6_01.jpg",
       "order": 6,"current": false,"completed": false, 
       "subpages":[
@@ -143,7 +143,7 @@
 
     {
       "id": "07",
-      "title": "MISIÓN 7 [s07-o12]",
+      "title": "MISIÓN 7",
       "picture": "/stations/station07/slider_7_01.jpg",
       "order": 7,"current": false,"completed": false, 
       "subpages":[
@@ -164,7 +164,7 @@
     
     {
       "id": "08", 
-      "title": "MISIÓN 8 [s8-o1]",
+      "title": "MISIÓN 8",
       "picture": "/stations/station08/slider_8_01.jpg",
       "order": 8,"current": false,"completed": false, 
       "subpages":[
@@ -188,7 +188,7 @@
 
     {
       "id": "09",
-      "title": "MISIÓN 9 [s9-o2]",
+      "title": "MISIÓN 9",
       "picture": "/stations/station09/slider_9_01.jpg",
       "order": 9,"current": false,"completed": false, 
       "subpages":[
@@ -213,7 +213,7 @@
 
     {
       "id": "10",
-      "title": "MISIÓN 10 [s10-o3]",
+      "title": "MISIÓN 10",
       "picture": "/stations/station10/slider_10_01.jpg",
       "order": 10,"current": false,"completed": false, 
       "subpages":[
@@ -238,7 +238,7 @@
 
     {
       "id": "11",
-      "title": "MISIÓN 11 [s11-o4]",
+      "title": "MISIÓN 11",
       "picture": "/stations/station11/slider_11_01.jpg",
       "order": 11,"current": false,"completed": false, 
       "subpages":[
@@ -258,7 +258,7 @@
 
     {
       "id": "12",
-      "title": "MISIÓN 12 [s12-o5]",
+      "title": "MISIÓN 12",
       "picture": "/stations/station12/slider_12_01.jpg",
       "order": 12,"current": false,"completed": false, 
       "subpages":[

@@ -43,7 +43,7 @@ export const useStations = () =>{
     const getListStations = ()=>{
         let stations = Array(context.stations).fill(0)
         for( const [idx, e] of (context.stations).entries()){ 
-            const title = e.title.substring(0, e.title.indexOf("["));
+            const title = e.title; //.substring(0, e.title.indexOf("["));
             const item = {key:e.order, name:title, id:e.id, title:title, order:e.order};
             stations[idx] = item;
         }

@@ -19,7 +19,7 @@ export const useApp = () =>{
         return true;
     }
 
-    const resetSystem = (resetCache)=>{
+    const resetSystem = (resetCache, hardReset)=>{
         if(resetCache){
             let fa_setup = getLocalStorage('fa_setup',[]);
             let fa_users = getLocalStorage('fa_users',[]);
@@ -28,10 +28,12 @@ export const useApp = () =>{
             
             localStorage. clear();
             
-            setLocalStorage('fa_users',fa_users);
-            setLocalStorage('fa_setup',fa_setup);
-            setLocalStorage('stations',stations);
-            setLocalStorage('station_layout',station_layout);
+            if(!hardReset){
+                setLocalStorage('fa_users',fa_users);
+                setLocalStorage('fa_setup',fa_setup);
+                setLocalStorage('stations',stations);
+                setLocalStorage('station_layout',station_layout);
+            }
 
             // _setupApiData(); //TODO: REVISAR SIN CONEXION
         }

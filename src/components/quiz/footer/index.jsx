@@ -57,9 +57,9 @@ function QuizFooter() {
   return (
     <Container fluid className='quiz-footer-container g-0 fixed-bottom' >
     <Row className='g-0'>
-      <Col className='text-start quiz-prev' onClick={onMovePrev}> {isPrevEnabled? <img  src='img/arrow.png'></img> : <img src='img/arrow_disabled.png'></img>} </Col>
+      <Col className='text-start quiz-prev' onClick={onMovePrev}> {/*{isPrevEnabled? <img  src='img/arrow.png'></img> : <img src='img/arrow_disabled.png'></img>} */}</Col>
       <Col className='col-8 text-center quiz-end' onClick={onFinish}>{isFinishEnabled?<span>finalizar</span>:<p></p>}</Col>
-      <Col className='text-end  quiz-next' onClick={onMoveNext}> {isNextEnabled?<img src='img/arrow.png'></img>:<img src='img/arrow_disabled.png'></img>} </Col>
+      <Col className='text-end  quiz-next' onClick={onMoveNext}> {/*{isNextEnabled?<img src='img/arrow.png'></img>:<img src='img/arrow_disabled.png'></img>} */}</Col>
     </Row>
   </Container>
   )

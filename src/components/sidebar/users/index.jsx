@@ -10,8 +10,8 @@ function SidebarUsers() {
     syncUsers();
   }
   
-  const onReset = (resetCache)=>{
-    resetSystem(resetCache);
+  const onReset = (resetCache, hardReset)=>{
+    resetSystem(resetCache, hardReset);
     navigate('/login')
   }
 
@@ -24,7 +24,13 @@ function SidebarUsers() {
       <hr/>
       <h4>System</h4>
       <Button variant="warning" onClick={()=>onReset(false)}>Reiniciar Sistema</Button> &nbsp;
-      <Button variant="danger" onClick={()=>onReset(true)}>Eliminar Datos</Button>
+      <p><b>Reiniciar Sistema</b>:.</p>
+      
+      <Button variant="warning" onClick={()=>onReset(true, false)}>Eliminar Cache</Button>
+      <p><b>Eliminar Cache</b>: borra toda informacion temporal. Mantiene los datos de los usuarios sincronizados 
+      y la configuracion del layout del recorrido</p>
+
+      <Button variant="danger" onClick={()=>onReset(true, true)}>Eliminar Datos</Button>
       <p><b>Eliminar Datos</b>: borra toda configuracion del sistema.</p>
     </Container>
   )

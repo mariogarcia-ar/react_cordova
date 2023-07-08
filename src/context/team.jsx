@@ -17,14 +17,14 @@ function TeamContextProvider({children}){
     useEffect(()=>{
         if(contextApp.isReadyApp){
             console.info('isReadyApp: Se monto el TeamContextProvider');
-            initApiData(setIsReady);
+            initApiData(setIsReady,setIsTeamReady);
         }
     },[contextApp.isReadyApp])
     
     useEffect(()=>{
         if(contextApp.resetSystem){
             console.info('resetApiData: Se reseteo el TeamContextProvider');
-            resetApiData(setTeam);
+            resetApiData(setTeam, setIsTeamReady);
         }
     },[contextApp.resetSystem])
 

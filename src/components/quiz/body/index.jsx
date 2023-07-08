@@ -1,9 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { useQuiz } from "../../../hooks/useQuiz"
 import './style.css'
+import { useState } from "react";
 
 function QuizBody() {
   const {getCurrQuestion, answerCurrQuestion, getCorrectAnswer} = useQuiz();
+  const [isChecked, setIsChecked] = useState(false);
   
   const setClassName = (option, itemSelected, idx)=>{ 
     
@@ -20,6 +22,13 @@ function QuizBody() {
       }
     }
 
+    if(isChecked){
+      let correctAnswer = getCorrectAnswer(getCurrQuestion());
+      if(option.id === correctAnswer.id){
+        _class += " quiz-body-item-selected quiz-body-item-selected-right ";
+      }
+    }
+
     idx = (idx+1)*100;
     _class += " bounce-left delay-"+idx;
     return _class;
@@ -30,6 +39,7 @@ function QuizBody() {
   }
 
   const onSelect = (option)=>{
+    setIsChecked(true);
     answerCurrQuestion(option);
   }
 

@@ -46,7 +46,7 @@ function SubStations() {
     <>
         <ButtonGroup className="substations-nav">
           {isFinishEnabled && <Button variant="danger"  onClick={onFinish}>Finalizar</Button>}
-          <Button  onClick={onPrevClick}>Anterior</Button>
+          {/* <Button  onClick={onPrevClick}>Anterior</Button> */}
           <Button  onClick={onNextClick}>Siguiente</Button>
         </ButtonGroup>
 

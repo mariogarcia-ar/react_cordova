@@ -2,7 +2,7 @@ import { Col, Container, Form, Offcanvas, Row } from 'react-bootstrap'
 import SidebarEvents from './events'
 import SidebarUsers from './users'
 import './styles.css';
-import StationLayout from '../station-layour';
+import StationLayout from '../station-layout';
 
 
 function Sidebar({show, handleClose}) {
@@ -11,7 +11,7 @@ function Sidebar({show, handleClose}) {
      
     <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Settings</Offcanvas.Title>
+            <Offcanvas.Title>P703 FORD Academy v1.4.0</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Container>
