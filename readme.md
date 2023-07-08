@@ -38,6 +38,8 @@ cordova run android
 - copiamos del proyecto tablet src y public 
 - ahora hay que corregi
 
+revisar el package.json
+
 rm -rf src/static
 mkdir src/static
 cp -r public/fonts src/static/
@@ -72,10 +74,12 @@ npm install
 npm start
 
 
+cambiar las versions 
 // run android
 rm -rf platforms && cordova platform add android
 cordova run android
 
+/home/ohroot/Desktop/projects/ReactCordova/platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
 # icons - splash
 splash va en res/screen/android/splash.png
