@@ -137,3 +137,6 @@ hdpi — ~240dpi
 xhdpi — ~320dpi
 xxhdpi — ~480dpi
 xxxhdpi — ~640dpi
+
+
+/home/ohroot/Desktop/projects/ReactCordova/platforms/android/app/build/outputs/apk/debug/app-debug.apk
