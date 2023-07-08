@@ -40,6 +40,16 @@ export const useStations = () =>{
         return context.currStation;
     }
 
+    const getListStations = ()=>{
+        let stations = Array(context.stations).fill(0)
+        for( const [idx, e] of (context.stations).entries()){ 
+            const title = e.title.substring(0, e.title.indexOf("["));
+            const item = {key:e.order, name:title, id:e.id, title:title, order:e.order};
+            stations[idx] = item;
+        }
+        return stations;
+    }
+
     const _getStationByOrder = (order) =>{
         return context.stations?.find( ele => ele.order === order);
     }
@@ -64,7 +74,7 @@ export const useStations = () =>{
     const moveNext = ()=>{
         let currentStation = getCurrentStation();
         let idx = currentStation.order + 1; 
-        
+
         let station;
         
         if(idx > _getCounter()){
@@ -100,6 +110,6 @@ export const useStations = () =>{
     }
 
     return { getIsReady, initApiData, resetApiData, getCurrentStation, 
-        moveNext, movePrev, isLastStation,
+        moveNext, movePrev, isLastStation, getListStations,
     } 
 }

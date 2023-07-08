@@ -7,7 +7,7 @@ import { useSystem } from "./useSystem";
 export const useUser = () =>{
     const context = useContext(UserContext);
     const {callApi} = useAxiosCustom();
-    const {getJid, getFordAcademyApiData} = useApp();
+    const {getJid} = useApp();
 
     const getIsReady = () =>{
         return context.isReady;

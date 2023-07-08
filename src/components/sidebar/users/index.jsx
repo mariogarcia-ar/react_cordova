@@ -23,8 +23,9 @@ function SidebarUsers() {
       <Button variant="warning" onClick={()=>navigate('/logout')}>Logout</Button>
       <hr/>
       <h4>System</h4>
-      <Button variant="warning" onClick={()=>onReset(false)}>Reinicia Sistema</Button> &nbsp;
-      <Button variant="danger" onClick={()=>onReset(true)}>Limpiar Cache</Button>
+      <Button variant="warning" onClick={()=>onReset(false)}>Reiniciar Sistema</Button> &nbsp;
+      <Button variant="danger" onClick={()=>onReset(true)}>Eliminar Datos</Button>
+      <p><b>Eliminar Datos</b>: borra toda configuracion del sistema.</p>
     </Container>
   )
 }
