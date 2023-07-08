@@ -1,12 +1,25 @@
 // import { useState } from "react";
 import { useContext } from "react";
 import { TeamContext } from "../context/team";
+import { useSystem } from "./useSystem";
 
 export const useTeam = () =>{
     const context = useContext(TeamContext)
 
     const getIsReady = () =>{
         return !!context.isReady;
+    }
+
+    const initApiData = async (setIsReady) => { 
+        console.log('useTeam: initApiData')
+
+        // const response = await fetch('../../assets/data.json').then(res => res.json());
+        // setTeam(response.team);
+        setIsReady(true);
+    }
+
+    const resetApiData = (setTeam)=>{
+        setTeam([]);
     }
 
     const _isTeamCompleted = (_members)=>{
@@ -39,7 +52,7 @@ export const useTeam = () =>{
         return context.isTeamReady;
     }
 
-    return { getIsReady,
+    return { getIsReady, initApiData, resetApiData,
              addMember, removeMember, getMember, 
              getTeam, isTeamReady}
 }

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import LayoutGuest from "../../components/layouts/guest"
 import Login from "../../components/login";
 import { useApp } from "../../hooks/useApp";
+import SystemStatus from "../../components/system/status";
 
 function LoginPage() {
   const {setPageTitle} = useApp();
@@ -12,7 +13,8 @@ function LoginPage() {
   
   return (
     <LayoutGuest id="LoginPage">
-      <Login />
+      <SystemStatus />
+      <Login />     
     </LayoutGuest>
   )
 }

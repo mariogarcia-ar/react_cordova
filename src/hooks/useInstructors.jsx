@@ -1,13 +1,29 @@
 import axios from "axios";
 import { useContext } from "react";
 import { InstructorsContext } from "../context/instructors";
+import { useSystem } from "./useSystem";
 
 export const useInstructors = () =>{
     const context = useContext(InstructorsContext)
+    const {getApiData} = useSystem();
 
     const getIsReady = () =>{
         return context.isReady;
     }
+
+    const initApiData = async (setInstructors, setIsReady) => {
+        let url = '../../assets/data.json';
+        let key = 'data';
+
+        let resp = await getApiData(key, url);
+        setInstructors(resp.instructors);
+        setIsReady(true);
+    }
+
+    const resetApiData = (setInstructors, setIsReady)=>{
+        initApiData(setInstructors, setIsReady)
+    }
+
 
     const getInstructors = () =>{
         return context.instructors;
@@ -17,15 +33,16 @@ export const useInstructors = () =>{
         context.setInstructors(value);
     }
 
-    const getInstructorByStarsId = (stars_id) =>{
-        const url = "./assets/data.json";
-        return axios.get(url).then( res =>{
-            const user = res.data.instructors.find(ele => ele.stars_id == stars_id);
-            return user;
-        })
+    const getInstructorByStarsId = async (stars_id) =>{
+        let url = './assets/data.json';
+        let key = 'data';
+
+        let resp = await getApiData(key, url);
+        const user = resp.instructors.find(ele => ele.stars_id == stars_id);
+        return user;
     }
 
-    return { getIsReady,  
+    return { getIsReady, initApiData, resetApiData,
              getInstructors, setInstructors,
              getInstructorByStarsId, }
 }

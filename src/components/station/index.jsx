@@ -19,7 +19,7 @@ function Station() {
   return (
     <>
       <ButtonGroup className="subpages-nav">
-        <Button className="btn-lg"  onClick={onStart}>Iniciar la Mision</Button>
+        <Button className="btn-lg"  onClick={onStart}>Iniciar la misión</Button>
       </ButtonGroup>
 
       {getCurrentStation()?.subpages &&  <Subcontent materiales={getCurrentStation()?.subpages} setIsCompleted={setIsCompleted} />}

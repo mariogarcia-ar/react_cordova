@@ -1,29 +1,46 @@
 import { useContext } from "react";
 import { AppContext } from "../context";
-import { useAxiosCustom } from "./useAxiosCustom";
-import localForage from "localforage";
+import { useSystem } from "./useSystem";
 
 export const useApp = () =>{
     const context = useContext(AppContext)
-    const {callApi} = useAxiosCustom();
+
+    const {getFordAcademyApiData, setConfig, getConfig, setLocalStorage, getLocalStorage} = useSystem();
 
     const _setupApiData =  async () =>{
-        localForage.getItem('users').then(res=>{
-            context.setUsers(res.length);
+        const key = 'fa_setup';
+        const url = '/setup';
+
+        getFordAcademyApiData(key, url, true).then(res=>{
+            context.setJid(setConfig('app_jid', res.jid)); // update view
+            context.setAid(setConfig('app_aid', res.aid)); // update view
+            context.setFecha(setConfig('app_fecha', res._current_date)); // update view
         })
-        callApi("/setup").then(res =>{
-            context.setJid(res.jid);
-            context.setAid(res.aid);
-            context.setFecha(res._current_date);
-            console.log(res);
-        })
+        return true;
+    }
+
+    const resetSystem = (resetCache)=>{
+        if(resetCache){
+            let fa_setup = getLocalStorage('fa_setup',[]);
+            let fa_users = getLocalStorage('fa_users',[]);
+            
+            localStorage. clear();
+            
+            setLocalStorage('fa_users',fa_users);
+            setLocalStorage('fa_setup',fa_setup);
+
+
+            // _setupApiData(); //TODO: REVISAR SIN CONEXION
+        }
+        context.setResetSystem( context.resetSystem + 1); //trigger reset childs
     }
 
     const syncUsers =  async () =>{
-        callApi("/users").then(res =>{
-            context.setUsers(res.length); // no se si la banque el contexto tener tantos usuarios
+        const key = 'fa_users';
+        const url = '/users';
 
-            localForage.setItem('users', res);
+        getFordAcademyApiData(key, url, true).then(res=>{
+            context.setNumLoadedUsers(setConfig('app_numLoadedUsers', res.length));
         })
     }
 
@@ -32,11 +49,11 @@ export const useApp = () =>{
     }
 
     const getPageTitle = ()=>{
-        return context.pageTitle;
+        return getConfig('app_pageTitle', 'P703 FORD Academy'); //context.pageTitle;
     }
 
     const setPageTitle = (value)=>{
-        context.setPageTitle(value);
+        setConfig('app_pageTitle', value); //context.pageTitle;
     }
 
     const getJid = ()=>{
@@ -64,24 +81,19 @@ export const useApp = () =>{
     }
 
     const getUsersCount = ()=>{
-        return context.users;
+        return context.numLoadedUsers;
     }
 
     const getUserByStarsId = async (id)=>{
-        const users = await localForage.getItem('users');
+        const users = await getLocalStorage('fa_users');
         const user = users.filter( (u) => u.stars_id == id);        
         return user?user[0]:null;
     }
-
-    const setUsers = (value)=>{
-        // context.setUsers(value);
-    }
     
-    
-    return { getIsReady, _setupApiData,
+    return { getIsReady, _setupApiData, resetSystem,
              getPageTitle, setPageTitle,
              getJid, setJid,
              getAid, setAid,
              getFecha, setFecha, 
-             getUsersCount, setUsers, syncUsers, getUserByStarsId}
+             getUsersCount, syncUsers, getUserByStarsId}
 }

@@ -28,7 +28,7 @@ function Login() {
         </Row>
         <Row className='main-button-container'>
           <Col>
-          <Button variant={isTeamReady()? 'primary':'secondary'}  disabled={!isTeamReady()} className="main-button"  onClick={onInit}>Comenzar Itinerario</Button>
+          <Button variant={isTeamReady()? 'primary':'secondary'}  disabled={!isTeamReady()} className="main-button"  onClick={onInit}>Comenzar itinerario</Button>
           </Col>
         </Row>
     </Container>

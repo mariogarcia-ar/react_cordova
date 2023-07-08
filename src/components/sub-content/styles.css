@@ -113,6 +113,9 @@
     font-style: normal;
     font-family: 'Ford Antenna Bold';
 }
+.subcontent .carousel-caption .subcontent-text strong.dark {
+    color:#fff;
+}
 .subcontent .carousel-caption ol li {
     padding: 10px;
 } 

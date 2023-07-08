@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
+import { AppContext } from ".";
+import { useTeam } from "../hooks/useTeam";
 
 export const TeamContext = createContext();
 
@@ -8,17 +10,24 @@ function TeamContextProvider({children}){
     const [isReady, setIsReady] = useState(false);
     const [team, setTeam] = useState([]);
     const [isTeamReady, setIsTeamReady] = useState(false); // for auth
-
-    const setupApiData = async () => { 
-        // const response = await fetch('../../assets/data.json').then(res => res.json());
-        // setTeam(response.team);
-        setIsReady(true);
-    }
-
+    
+    // trigger when the AppContext is ready
+    const contextApp = useContext(AppContext)
+    const {initApiData, resetApiData} = useTeam();
     useEffect(()=>{
-        console.info('Se monto el TeamContextProvider');
-        setupApiData();
-    },[])
+        if(contextApp.isReadyApp){
+            console.info('isReadyApp: Se monto el TeamContextProvider');
+            initApiData(setIsReady);
+        }
+    },[contextApp.isReadyApp])
+    
+    useEffect(()=>{
+        if(contextApp.resetSystem){
+            console.info('resetApiData: Se reseteo el TeamContextProvider');
+            resetApiData(setTeam);
+        }
+    },[contextApp.resetSystem])
+
 
     return (
         <TeamContext.Provider value={{

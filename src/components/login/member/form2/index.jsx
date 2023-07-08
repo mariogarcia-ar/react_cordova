@@ -53,7 +53,7 @@ function MemberForm2({position, member, setMember}) {
               <h2>{member?.name} {member?.lastname}</h2>
               <h2>Stars ID: {member?.stars_id}</h2>
               <h3>{member?.dealership}</h3>
-              {!confirmed && <small>Presione <strong>confirmar</strong> si los datos son correctos</small>}
+              {!confirmed && <small>Presioná <strong>confirmar</strong> si los datos son correctos</small>}
             </FormLabel> 
         </Form.Group>
           

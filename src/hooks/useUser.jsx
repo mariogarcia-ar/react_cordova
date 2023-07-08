@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/user";
 import { useApp } from "./useApp";
 import { useAxiosCustom } from "./useAxiosCustom";
+import { useSystem } from "./useSystem";
 
 export const useUser = () =>{
     const context = useContext(UserContext);
@@ -24,9 +25,15 @@ export const useUser = () =>{
         return context.user;
     }
 
-    const getUserByStarsId = (stars_id) =>{
+    const getUserByStarsId = async (stars_id) =>{
         //TODO: refactorizar a un metodo con mejor nombre
-        return callApi("/users/"+stars_id+'/enrolled/'+getJid());        
+        // return callApi("/users/"+stars_id+'/enrolled/'+getJid());     
+
+        const key = 'fa_users_enrolled';
+        const url = "/users/"+stars_id+'/enrolled/'+getJid();
+
+        const res = await getFordAcademyApiData(key, url, true);
+        return res;
     }
 
     return { getIsReady,  

@@ -1,15 +1,37 @@
 import { useContext } from "react";
 import { StationsContext } from "../context/stations";
 import { useQuiz } from "./useQuiz";
+import { useSystem } from "./useSystem";
 
 export const useStations = () =>{
     const context = useContext(StationsContext)
     const {setCurrQuiz, getQuizByStation, resetQuizSend} = useQuiz();
+    const {getApiData} = useSystem();
+
 
     const getIsReady = () =>{
         return context.isReady;
     }
 
+    const initApiData = async (setStations,setIsReady,setCurrStation,setCurrMaterial) => { 
+        console.log('useStations: initApiData')
+        let url = '../../assets/stations.json';
+        let key = 'stations';
+
+        let resp = await getApiData(key, url);
+        setStations(resp.stations);
+        setIsReady(true);
+
+        let _currStation = resp.stations?.find( ele => ele.order === 1);
+        setCurrStation(_currStation); 
+
+        let _material = _currStation.materials?.find( ele => ele.order === 1);
+        setCurrMaterial(_material);
+    }
+    
+    const resetApiData = async (setStations,setIsReady,setCurrStation,setCurrMaterial) => { 
+        initApiData(setStations,setIsReady,setCurrStation,setCurrMaterial);
+    }
     const _getCounter = () =>{
         return context.stations?.length;
     }
@@ -77,7 +99,7 @@ export const useStations = () =>{
         return station;
     }
 
-    return { getIsReady,getCurrentStation, 
+    return { getIsReady, initApiData, resetApiData, getCurrentStation, 
         moveNext, movePrev, isLastStation,
     } 
 }

@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-// import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
-// import { StationsContext } from "./stations";
+import { AppContext } from ".";
+import { useQuiz } from "../hooks/useQuiz";
 
 export const QuizContext = createContext();
 
@@ -13,22 +13,22 @@ function QuizContextProvider({children}){ //TODO SACAR UPDATEVIEW
     const [currQuestion, setCurrQuestion] = useState({})
     const [answersSent , setAnswersSent] = useState(false);
 
-    const setupApiData = async () => { 
-        const response = await fetch('../../assets/questions.json').then(res => res.json());
-        
-        setQuizzes(response.quizzes);
-        setIsReady(true);
-
-        //malll pero vamos por ahora
-        setCurrQuiz(response.quizzes[0]);
-        let question =  response.quizzes[0].questions?.find( ele => ele.order === 1);
-        setCurrQuestion(question);
-    }
+    // trigger when the AppContext is ready
+    const contextApp = useContext(AppContext)
+    const {initApiData, resetApiData} = useQuiz();
+    useEffect(()=>{
+        if(contextApp.isReadyApp){
+            console.info('isReadyApp: Se monto el QuizContextProvider');
+            initApiData(setQuizzes,setIsReady, setCurrQuiz, setCurrQuestion);
+        }
+    },[contextApp.isReadyApp])
 
     useEffect(()=>{
-        console.info('Se monto el QuizContextProvider');
-        setupApiData();
-    },[])
+        if(contextApp.resetSystem){
+            console.info('resetApiData: Se reseteo el QuizContextProvider');
+            resetApiData(setQuizzes,setIsReady, setCurrQuiz, setCurrQuestion);
+        }
+    },[contextApp.resetSystem])
 
     return (
         <QuizContext.Provider value={{

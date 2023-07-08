@@ -1,13 +1,33 @@
 import { useContext } from "react";
 import { QuizContext } from "../context/quiz";
+import { useSystem } from "./useSystem";
 
 export const useQuiz = () =>{ // TODO: REFACTOR
     const context = useContext(QuizContext);
+    const {getApiData} = useSystem();
 
     const getIsReady = () =>{
         return context.isReady;
     }
 
+    const initApiData = async (setQuizzes,setIsReady, setCurrQuiz, setCurrQuestion) => { 
+        console.log('useQuiz: initApiData')
+        let url = '../../assets/questions.json';
+        let key = 'questions';
+
+        let resp = await getApiData(key, url);
+        setQuizzes(resp.quizzes);
+        setIsReady(true);
+
+        //malll pero vamos por ahora
+        setCurrQuiz(resp.quizzes[0]);
+        let question =  resp.quizzes[0].questions?.find( ele => ele.order === 1);
+        setCurrQuestion(question);
+    }
+    
+    const resetApiData = async (setQuizzes,setIsReady, setCurrQuiz, setCurrQuestion) => { 
+        initApiData(setQuizzes,setIsReady, setCurrQuiz, setCurrQuestion);
+    }
     const getQuizByStation = (station)=>{
         let _quiz = context.quizzes.find( ele => ele.station_id === station.id);
         return _quiz;
@@ -137,7 +157,7 @@ setTimeout(() => {
     }
 
     return {
-        getIsReady, isQuizSent, getCurrQuiz, resetQuizSend,
+        getIsReady, initApiData, resetApiData, isQuizSent, getCurrQuiz, resetQuizSend,
         getProgess, setTimerQuiz,
         getCurrQuestion, answerCurrQuestion,
         moveNext, movePrev,

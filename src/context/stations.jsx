@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
+import { AppContext } from ".";
+import { useStations } from "../hooks/useStations";
 
 export const StationsContext = createContext();
 
@@ -10,22 +12,22 @@ function StationsContextProvider({children}){
     const [currStation, setCurrStation] = useState({}); // La estacion activa
     const [currMaterial, setCurrMaterial] = useState({}); // El material activo
     
-    const setupApiData = async () => { 
-        const response = await fetch('../../assets/stations.json').then(res => res.json());
-        setStations(response.stations);
-        setIsReady(true);
-
-        let _currStation = response.stations?.find( ele => ele.order === 1);
-        setCurrStation(_currStation); 
-
-        let _material = _currStation.materials?.find( ele => ele.order === 1);
-        setCurrMaterial(_material);
-    }
-    
+    // trigger when the AppContext is ready
+    const contextApp = useContext(AppContext)
+    const {initApiData, resetApiData} = useStations();
     useEffect(()=>{
-        console.info('Se monto el StationsContextProvider');
-        setupApiData();
-    },[])
+        if(contextApp.isReadyApp){
+            console.info('isReadyApp: Se monto el StationsContextProvider');
+            initApiData(setStations,setIsReady,setCurrStation,setCurrMaterial);
+        }
+    },[contextApp.isReadyApp])
+
+    useEffect(()=>{
+        if(contextApp.resetSystem){
+            console.info('resetApiData: Se reseteo el StationsContextProvider');
+            resetApiData(setStations,setIsReady,setCurrStation,setCurrMaterial);
+        }
+    },[contextApp.resetSystem])
 
     return (
         <StationsContext.Provider value={{
