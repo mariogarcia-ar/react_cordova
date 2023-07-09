@@ -2,7 +2,7 @@
   "homepage": "./",
   "name": "p703.fordacademy.com.ar",
   "displayName": "FORD Academy",
-  "version": "1.4.0",
+  "version": "1.4.3",
   "description": "FORD P703 Streaming y Evento",
   "main": "index.js",
   "keywords": [
