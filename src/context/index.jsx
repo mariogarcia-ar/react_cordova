@@ -19,6 +19,7 @@ function AppContextProvider({children}){
     const [resetSystem, setResetSystem] = useState(0)
 
     // const [pageTitle, setPageTitle] = useState("Ford Ranger");
+    const [tabletId, setTabletId] = useState(getConfig('app_tabletId', "-01"))
     const [jid, setJid] = useState(getConfig('app_jid', -42))
     const [aid, setAid] = useState(getConfig('app_aid', -92))
     const [fecha, setFecha] = useState(getConfig('app_fecha', 'sin-fecha'))//TODO: SACAR?
@@ -34,6 +35,7 @@ function AppContextProvider({children}){
     <AppContext.Provider value={{
         isReadyApp, 
         resetSystem, setResetSystem,
+        tabletId, setTabletId,
         jid, setJid,
         aid, setAid,
         fecha, setFecha,

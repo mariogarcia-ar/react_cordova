@@ -10,7 +10,7 @@ import { useApp } from '../../../hooks/useApp';
 // 15-46-108   2023-08-02
 // 15-47-112   2023-08-03
 
-function SidebarEvents() {
+function SidebarEvents({isAdmin}) {
     const {getJid, setJid, getAid, setAid, getFecha} = useApp();
     // const {setupApiData} = useQuiz();
 
@@ -42,7 +42,9 @@ function SidebarEvents() {
          <li>2023-08-02 <b>eid</b>=15  <b>jid</b>=46  <b>aid</b>=108   </li>
          <li>2023-08-03 <b>eid</b>=15  <b>jid</b>=47  <b>aid</b>=112   </li>
     </ul>
-    <Form>
+    {isAdmin && 
+    <>
+     <Form>
         <Form.Group className='mb-3'>
             <Form.Select aria-label="Jornada" onChange={onSelectJornada} defaultValue={getJid()}>
             {[42,43,44,45,46,47,48].map(jid=>(
@@ -58,7 +60,10 @@ function SidebarEvents() {
             ))}
             </Form.Select>
         </Form.Group>             
-    </Form>    
+    </Form>   
+    </>
+    }
+    
 </Container>
  
   )

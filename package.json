@@ -2,7 +2,7 @@
   "homepage": "./",
   "name": "p703.fordacademy.com.ar",
   "displayName": "FORD Academy",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "FORD P703 Streaming y Evento",
   "main": "index.js",
   "keywords": [
@@ -25,6 +25,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.3",
+    "react-hot-toast": "^2.4.1",
     "react-pdf": "^7.1.1",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",

@@ -4,17 +4,43 @@ import './styles.css'
 import { useSystem } from '../../hooks/useSystem';
 import { useStations } from '../../hooks/useStations';
 import { AppContext } from '../../context';
-import { Button } from 'react-bootstrap';
+import { Button, Dropdown, DropdownButton } from 'react-bootstrap';
 import { useApp } from '../../hooks/useApp';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
-function StationLayout() {
+function SelecTablet(){
+  const {getConfig} = useSystem();
+  const {setTabletId} = useApp();
+
+  const tablets = ['01','02','03','04','05','06','07','08','09',
+                   '11','12','13','14','15','16','17','18','19',]
+                  //  '21','22','23','24','25','26','27','28','29']
+
+  const onSelectTablet = (value)=>{
+    toast.success('Se cambio el codigo de tablet');
+    getConfig('app_tabletId', value);
+    setTabletId(value)
+  }
+  return (
+    <>
+    <DropdownButton className='d-inline-block' onSelect={onSelectTablet}>
+    {tablets?.map((item) =>(
+      <Dropdown.Item eventKey={item}>Tablet #{item}</Dropdown.Item>
+    ))}
+
+    </DropdownButton>
+    </>
+  )
+}
+
+function StationLayout({isAdmin}) {
   const contextApp = useContext(AppContext)
   const navigate = useNavigate();
 
-  const {resetSystem} = useApp();
+  const {resetSystem, getTabletId} = useApp();
   const {getConfig, setConfig} = useSystem();
-  const {getListStations} = useStations();
+  const {getListStations, getCurrentStation} = useStations();
   const [listado , setListado] = useState(getConfig('station_layout', getListStations()))
 
   useEffect(()=>{
@@ -58,23 +84,36 @@ function StationLayout() {
     setConfig('station_layout', station_layout);
     setListado(station_layout);
 
+    toast.success('Se actualizo el itinerario.');
     navigate('/login');
     // resetear la estacion
   }
 
+  const setClassName = (item)=>{
+    let _class = 'grid-square';
+    let _station = getCurrentStation();
+    if(item.id == _station.id){
+      _class += ' current ';
+    }
+    return _class;
+  }
   return (
     <>
-    <h4>Itinerario :: Tablet <b>15</b></h4>
-    <Button onClick={onSave}>Guardar</Button>
+    <h4>Itinerario :: Tablet <b>{getTabletId()}</b> {isAdmin && <SelecTablet />}</h4>
+    
+    
+
     <ReactSortable   
         id="gridDemo"
         list={listado}
+        disabled={!isAdmin}
         delay={0}
         setList={setListado} >
             {listado.map((item) =>(
-                <div className='myitems grid-square' key={item.key}>{item.name}</div>
+                <div className={setClassName(item)} key={item.key}>{item.name}</div>
             ))}
     </ReactSortable>
+    {isAdmin && <Button onClick={onSave}>Guardar</Button> }
     </>
   )
 }

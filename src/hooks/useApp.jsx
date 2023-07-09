@@ -61,6 +61,14 @@ export const useApp = () =>{
         setConfig('app_pageTitle', value); //context.pageTitle;
     }
 
+    const getTabletId = ()=>{
+        return context.tabletId;
+    }
+
+    const setTabletId = (value)=>{
+        context.setTabletId(value);
+    }
+
     const getJid = ()=>{
         return context.jid;
     }
@@ -97,6 +105,7 @@ export const useApp = () =>{
     
     return { getIsReady, _setupApiData, resetSystem,
              getPageTitle, setPageTitle,
+             getTabletId, setTabletId,
              getJid, setJid,
              getAid, setAid,
              getFecha, setFecha, 
