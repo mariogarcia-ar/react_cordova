@@ -7,7 +7,8 @@ import { useSystem } from "./useSystem";
 export const useUser = () =>{
     const context = useContext(UserContext);
     const {callApi} = useAxiosCustom();
-    const {getJid, getFordAcademyApiData} = useApp();
+    const {getJid} = useApp();
+    const {trace} = useSystem();
 
     const getIsReady = () =>{
         return context.isReady;
@@ -15,6 +16,8 @@ export const useUser = () =>{
 
     const setUser = (user)=>{
         context.setUser(user);
+        trace('useUser:setUser:setUser', user);
+
     }
 
     const isUserLogued = ()=>{

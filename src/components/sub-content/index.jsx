@@ -6,12 +6,13 @@ import PDFViewer from "../pdfViewer";
 import Popup from "../popup";
 import VideoPlayer from "../videoPlayer";
 import './styles.css';
+import { useSystem } from "../../hooks/useSystem";
 
 function Subcontent({myref, materiales, setIsCompleted}) {
     const [index, setIndex] = useState(0);
     const [count, setCount] = useState(0);
     const [visited, setVisited] = useState([]);
-
+    const {trace} = useSystem();
 
     useEffect(()=>{
       setCount(materiales.length);
@@ -20,6 +21,7 @@ function Subcontent({myref, materiales, setIsCompleted}) {
     const handleSelect = (selectedIndex) => {
         let _index = index + 1;
         setIndex(_index); 
+        trace('Subcontent:handleSelect',{index:_index, innerHTML: myref.current.element.innerHTML});
 
         let _visited = visited;
         if(_visited.indexOf(selectedIndex) === -1) {

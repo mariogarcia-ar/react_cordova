@@ -3,10 +3,12 @@
 import { useContext } from "react";
 import { StationsContext } from "../context/stations";
 import { useStations } from "./useStations";
+import { useSystem } from "./useSystem";
 
 export const useStation = () =>{
     const context = useContext(StationsContext)
     const {getCurrentStation} = useStations();
+    const {trace} = useSystem();
 
 
     const getStationMaterials = ()=>{ //TODO: VER DE PONER MEJOR NOMBRE
@@ -19,6 +21,8 @@ export const useStation = () =>{
     
     const setCurrMaterial = (value)=>{
         context.setCurrMaterial(value)
+        trace('useStation:setCurrMaterial:setCurrMaterial', value);
+
     } 
     
     const _getCounter = () =>{
@@ -43,6 +47,8 @@ export const useStation = () =>{
             material.active = true; 
         }    
         context.setCurrMaterial(material);
+        trace('useStation:moveNextMaterial:setCurrMaterial', material);
+
         return material;
     }
  
@@ -60,6 +66,8 @@ export const useStation = () =>{
             material.active = true; 
         }    
         context.setCurrMaterial(material);
+        trace('useStation:movePrevMaterial:setCurrMaterial', material);
+
         return material;
     }
 

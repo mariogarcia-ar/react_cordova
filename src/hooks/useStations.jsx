@@ -6,7 +6,7 @@ import { useSystem } from "./useSystem";
 export const useStations = () =>{
     const context = useContext(StationsContext)
     const {setCurrQuiz, getQuizByStation, resetQuizSend} = useQuiz();
-    const {getApiData} = useSystem();
+    const {getApiData, trace} = useSystem();
 
 
     const getIsReady = () =>{
@@ -57,6 +57,8 @@ export const useStations = () =>{
     const _setCurrMaterial = (station)=>{
         let _material = station.materials?.find( ele => ele.order === 1);
         context.setCurrMaterial(_material);
+        trace('useStations:_setCurrMaterial:setCurrMaterial', _material);
+
     }
     const _setCurrQuiz = (station)=>{
         let _quiz = getQuizByStation(station);
@@ -85,6 +87,8 @@ export const useStations = () =>{
             station.current = true; 
         }    
         context.setCurrStation(station);
+        trace('useStations:moveNext:setCurrStation', station);
+
         _setCurrMaterial(station);
         _setCurrQuiz(station); // todo esto deberia terno el quiz
         resetQuizSend(); // reset
@@ -105,6 +109,8 @@ export const useStations = () =>{
             station.current = true; 
         }    
         context.setCurrStation(station);
+        trace('useStations:movePrev:setCurrStation', station);
+
         _setCurrMaterial(station);
         return station;
     }

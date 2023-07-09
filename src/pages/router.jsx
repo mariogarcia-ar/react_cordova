@@ -10,6 +10,7 @@ import QuizPage from './quiz'
 import StationPage from './station'
 import StationCheckPage from './station-check'
 import StationDashboardPage from './station-dashboard'
+import { useSystem } from '../hooks/useSystem'
 
 const routes = [
   { path: '/*', name: 'NotFoundPage', element: <NotFoundPage />, nodeRef: createRef() }, 
@@ -33,11 +34,23 @@ function WrapperRoutes() {
   const location = useLocation()
   const currentOutlet = useOutlet()
   const { nodeRef } =  routes.find((route) => route.path === location.pathname) ?? {}
+  const {trace} = useSystem();
+
+  const myOnEnter = (node, done)=>{
+    trace('WrapperRoutes:myOnEnter:location', location);
+  }
+  const myOnExit = (node, done)=>{
+    trace('WrapperRoutes:myOnExit:location', location);
+  }
+  
+
   return (
     <>
       <SwitchTransition>
             <CSSTransition
               key={location.pathname}
+              onEnter={()=>myOnEnter(nodeRef)}
+              onExit={()=>myOnExit(nodeRef)}
               nodeRef={nodeRef}
               timeout={200}
               classNames="mypage"

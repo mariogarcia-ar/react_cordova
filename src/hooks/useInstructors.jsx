@@ -5,7 +5,7 @@ import { useSystem } from "./useSystem";
 
 export const useInstructors = () =>{
     const context = useContext(InstructorsContext)
-    const {getApiData} = useSystem();
+    const {getApiData, trace} = useSystem();
 
     const getIsReady = () =>{
         return context.isReady;
@@ -31,6 +31,7 @@ export const useInstructors = () =>{
     
     const setInstructors = (value) =>{
         context.setInstructors(value);
+        trace('useInstructors:setInstructors:setInstructors',value);
     }
 
     const getInstructorByStarsId = async (stars_id) =>{

@@ -4,7 +4,7 @@ import { useSystem } from "./useSystem";
 
 export const useQuiz = () =>{ // TODO: REFACTOR
     const context = useContext(QuizContext);
-    const {getApiData} = useSystem();
+    const {getApiData, trace} = useSystem();
 
     const getIsReady = () =>{
         return context.isReady;
@@ -61,6 +61,8 @@ export const useQuiz = () =>{ // TODO: REFACTOR
 
         let q_order = question.order;
         context.setCurrQuestion(JSON.parse(JSON.stringify(question)));
+        trace('useQuiz:answerCurrQuestion:setCurrQuestion', question);
+
 setTimeout(() => {
     question = _getQuestionByOrder(q_order);
     context.setCurrQuestion(question);
@@ -97,6 +99,8 @@ setTimeout(() => {
             question.current = true; 
         }    
         context.setCurrQuestion(question);
+        trace('useQuiz:moveNext:setCurrQuestion', question);
+
         return question;
     }
 
@@ -114,11 +118,15 @@ setTimeout(() => {
             question.current = true; 
         }    
         context.setCurrQuestion(question);
+        trace('useQuiz:movePrev:setCurrQuestion', question);
+
         return question;
     }
 
     const resetQuizSend = ()=>{ //TODO: RESET ANSWERS
         context.setAnswersSent(false);
+        trace('useQuiz:resetQuizSend:setAnswersSent', false);
+
     }
 
     const isQuizSent = ()=>{
@@ -127,6 +135,7 @@ setTimeout(() => {
 
     const sendAnswers = ()=>{
         context.setAnswersSent(true);
+        trace('useQuiz:sendAnswers:setAnswersSent', true);
     }
 
     const setTimerQuiz = (timer)=>{ //TODO: REVIEW EACH SECOND
@@ -147,8 +156,12 @@ setTimeout(() => {
 
     const setCurrQuiz = (quiz)=>{
         context.setCurrQuiz(quiz);
+        trace('useQuiz:setCurrQuiz:setCurrQuiz', quiz);
+
         let question =  quiz?.questions?.find( ele => ele.order === 1);
         context.setCurrQuestion(question);
+        trace('useQuiz:setCurrQuiz:setCurrQuestion', question);
+
     }
 
     const getCorrectAnswer = (quiz)=>{

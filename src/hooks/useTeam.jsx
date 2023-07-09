@@ -5,6 +5,7 @@ import { useSystem } from "./useSystem";
 
 export const useTeam = () =>{
     const context = useContext(TeamContext)
+    const {trace} = useSystem();
 
     const getIsReady = () =>{
         return !!context.isReady;
@@ -26,17 +27,23 @@ export const useTeam = () =>{
     const _isTeamCompleted = (_members)=>{
         let ready = _members.length >= 1;
         context.setIsTeamReady(ready)
+        trace('useTeam:_isTeamCompleted:setIsTeamReady', ready);
+
     }
 
     const addMember = (member) =>{
         let _members = [...context.team, member];
         context.setTeam(_members);
+        trace('useTeam:addMember:setTeam', _members);
+
         _isTeamCompleted(_members);
     }
     
     const removeMember = (member) =>{
         let _members = context.team.filter( ele => ele.stars_id !== member.stars_id)
         context.setTeam(_members);
+        trace('useTeam:removeMember:setTeam', _members);
+
         _isTeamCompleted(_members);
     }
 

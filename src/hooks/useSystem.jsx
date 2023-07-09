@@ -1,5 +1,5 @@
 import { useContext } from "react";
-// import localForage from "localforage";
+import localForage from "localforage";
 import { useAxiosCustom } from "./useAxiosCustom";
 
 export const useSystem = () =>{
@@ -7,6 +7,7 @@ export const useSystem = () =>{
 
     const setLocalStorage = (key, value)=>{
         localStorage.setItem(key, JSON.stringify(value));
+        trace(key, value);
     }
     
     const getLocalStorage = (key, value)=>{
@@ -18,6 +19,17 @@ export const useSystem = () =>{
             setLocalStorage(key, value)
             return value
         }
+    }
+
+    const trace = (key, value)=>{
+        let skip = ['station_layout'];
+        if(skip.includes(key)) return false; 
+
+        // jid, aid, fecha -> listo esta en el indexedDB 
+        // ts, tablet_id, team_id, user, quiz, question, answer, instructor
+        let rand = (Math.random() + 1).toString(36).substring(7);
+        let keyLF = Date.now()+'_'+rand+'_'+key;
+        localForage.setItem(keyLF, value); // historical data
     }
 
     const setConfig = (key, value) =>{
@@ -73,7 +85,7 @@ export const useSystem = () =>{
         return response;        
     }    
 
-    return { getConfig, setConfig, 
+    return { getConfig, setConfig, trace,
             setLocalStorage, getLocalStorage,
             getApiData, getFordAcademyApiData }
 }

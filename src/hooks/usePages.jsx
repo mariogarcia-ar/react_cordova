@@ -4,7 +4,7 @@ import { useSystem } from "./useSystem";
 
 export const usePages = () =>{
     const context = useContext(PagesContext)
-    const {getApiData} = useSystem();
+    const {getApiData, trace} = useSystem();
 
     const getIsReady = () =>{
         return context.isReady;
@@ -29,6 +29,7 @@ export const usePages = () =>{
     
     const setPages = (value) =>{
         context.setPages(value);
+        trace('usePages:setPages:setPages', value);
     }
 
     const getPageById = (id) =>{

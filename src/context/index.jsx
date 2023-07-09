@@ -22,7 +22,7 @@ function AppContextProvider({children}){
     const [jid, setJid] = useState(getConfig('app_jid', -42))
     const [aid, setAid] = useState(getConfig('app_aid', -92))
     const [fecha, setFecha] = useState(getConfig('app_fecha', 'sin-fecha'))//TODO: SACAR?
-    const [numLoadedUsers, setNumLoadedUsers] = useState(getConfig('app_numLoadedUsers', 'sin-fecha')); // numLoadedUsers counts TODO: CAMBIAR
+    const [numLoadedUsers, setNumLoadedUsers] = useState(getConfig('app_numLoadedUsers', 0)); // numLoadedUsers counts TODO: CAMBIAR
     
     
     useEffect(()=>{

@@ -6,19 +6,22 @@ import { useQuiz } from "../../hooks/useQuiz";
 import { useStations } from "../../hooks/useStations";
 
 import './styles.css';
+import { useSystem } from "../../hooks/useSystem";
 
 function SidebarStationVerification() {
   const navigate = useNavigate();
   const {register, handleSubmit, formState:{errors}} = useForm({reValidateMode: "onSubmit"});
   const {getInstructorByStarsId} = useInstructors();
   const {moveNext, isLastStation} = useStations();
+  const {trace} = useSystem();
 
   const validate_stars_id = async (value) =>{
     let _instructor = await getInstructorByStarsId(value);
     return !!_instructor;
   }
 
-  const onSubmit = () =>{
+  const onSubmit = (data) =>{
+    trace('SidebarStationVerification:onSubmit:Instructor_id', data);
     if(isLastStation()){
       // moveFirst(); // reset ...
       navigate('/logout');

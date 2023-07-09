@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { Button, Image, Modal } from 'react-bootstrap'
 import './styles.css';
+import { useSystem } from '../../hooks/useSystem';
 
 function Popup({item}) {
+    const {trace} = useSystem();
     // modal
     const [show, setShow] = useState(false);  
     const [fullscreen, setFullscreen] = useState(true);
     function handleShow(breakpoint) {
+        trace('Popup:handleShow',item);
         setFullscreen(breakpoint);
         setShow(true);
       }    
