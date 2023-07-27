@@ -33,6 +33,9 @@ export const useApp = () =>{
                 setLocalStorage('fa_setup',fa_setup);
                 setLocalStorage('stations',stations);
                 setLocalStorage('station_layout',station_layout);
+                context.setNumLoadedUsers(setConfig('app_numLoadedUsers', 0));
+                context.setNumLoadedUsers(setConfig('app_tabletId', "-01"));
+
             }
 
             // _setupApiData(); //TODO: REVISAR SIN CONEXION

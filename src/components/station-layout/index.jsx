@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 function SelecTablet(){
-  const {getConfig} = useSystem();
+  const {setConfig} = useSystem();
   const {setTabletId} = useApp();
 
   const tablets = ['01','02','03','04','05','06','07','08','09',
@@ -19,14 +19,14 @@ function SelecTablet(){
 
   const onSelectTablet = (value)=>{
     toast.success('Se cambio el codigo de tablet');
-    getConfig('app_tabletId', value);
+    setConfig('app_tabletId', value);
     setTabletId(value)
   }
   return (
     <>
-    <DropdownButton className='d-inline-block' onSelect={onSelectTablet}>
+    <DropdownButton className='d-inline-block' title="#tablet" onSelect={onSelectTablet}>
     {tablets?.map((item) =>(
-      <Dropdown.Item eventKey={item}>Tablet #{item}</Dropdown.Item>
+      <Dropdown.Item key={item} eventKey={item}>Tablet #{item}</Dropdown.Item>
     ))}
 
     </DropdownButton>

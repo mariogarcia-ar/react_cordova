@@ -3,7 +3,7 @@
     {
       "id": "01",
       "title": "MISIÓN 1",
-      "order": 3,"current": false,"completed": false, 
+      "order": 1,"current": false,"completed": false, 
       "subpages":[
         {
           "class":"tpl-default top", "id":"station_01_01",  
@@ -54,7 +54,7 @@
       "id": "03",
       "title": "MISIÓN 3",
       "picture": "/stations/station03/slider_3_01.jpg",
-      "order": 1,"current": false,"completed": false, 
+      "order": 3,"current": false,"completed": false, 
       "subpages":[
         {"class":"tpl-default top", "id": "home_07",  
           "title": "<span class='text-shadow'>¿UN POCO DE AGUA?</span>", 
@@ -148,7 +148,7 @@
       "order": 7,"current": false,"completed": false, 
       "subpages":[
         {"class":"tpl-default top", "id": "home_18",  
-          "title": "<span class='text-shadow'>¡PARÁ LA PELOTA!<br>(Y DE REVÉS)</span>", 
+          "title": "<span class='text-shadow'>Asistido<br>En Reversa</span>", 
           "subtitle": "", 
           "text": "", 
           "type":"image", 
@@ -157,40 +157,17 @@
       ],
       "materials": [
 {"class":"tpl-izq blue small", "active":false, "order":1, "id": "station07_01",  "title": "", "subtitle": "<strong>Asistente de frenado en reversa</strong>", "text": "Tu Ford Ranger está equipada con asistente de frenado en reversa, que está diseñado para ayudar a evitar una colisión cuando el vehículo está circulando en reversa. Los sensores ubicados en la parte trasera del vehículo pueden detectar una posible colisión y aplicar los frenos.<br><br>Podés activar y desactivar el asistente de frenado en reversa a través de SYNC 4. Para hacerlo, presioná en el menú de opciones ubicado en la pantalla, luego seleccioná Asistencia al conductor, y allí encontrarás la opción para activar o desactivar el asistente de frenado en reversa.", "type":"image", "url": "/stations/station07/slider_7_02.jpg"},
-{"class":"tpl-izq sombra top", "active":false, "order":2, "id": "station07_02",  "title": "", "subtitle": "<strong>DESAFÍO PARA EL COPILOTO:</strong>", "text": "<ol><li>Bajar de la pickup.</li><li>Agarrar la pelota mientras el conductor da marcha atrás.</li><li>Tirar la pelota rodando suavemente.</li><li>Descubran juntos cómo el asistente de frenado hace lo suyo ¡y sorpréndanse!</li></ol>", "type":"image", "url": "/stations/station07/slider_7_03.jpg"}
+{"class":"tpl-izq sombra top", "active":false, "order":2, "id": "station07_02",  "title": "", "subtitle": "<strong>DESAFÍO PARA EL COPILOTO:</strong>", "text": "<ol><li>Situá la camioeneta a 20mts de los Barriles </li><li>Coloca la Reversa y acelera para que la camioneta empieza a retroceder apuntando a los barriles.</li><li>No toques ningun pedal y comprobá como la camioenta frena sola gracias al Asistente de Frenado en Reversa.</li></ol>", "type":"image", "url": "/stations/station07/slider_7_03.jpg"}
       ]
     },
     
     
-    {
-      "id": "08", 
-      "title": "MISIÓN 8",
-      "picture": "/stations/station08/slider_8_01.jpg",
-      "order": 8,"current": false,"completed": false, 
-      "subpages":[
-        {"class":"tpl-default top", "id": "home_19",  
-          "title": "<span class='text-shadow'>SI TE DISTRAÉS…</span>", 
-          "subtitle": "<span class='text-shadow'>¡NO SIEMPRE PERDÉS!</span>", 
-          "text": "",
-          "type":"image", 
-          "url": "/stations/station08/slider_8_01.jpg",
-          "popup":{
-            "title": "<strong>Tu Ford Ranger está equipada con asistente automático de frenado con detección de peatones.</strong>",
-            "text": "<strong>¿Cómo funciona?</strong><br><br>El sistema utiliza una cámara frontal ubicada en el parabrisas, que permite a tu Ranger detectar vehículos y peatones para evitar una posible colisión.<br>Si tu Ranger se acerca rápidamente a otro vehículo (detenido o que viaja en la misma dirección que el tuyo), el sistema proporcionará tres niveles de asistencia al conductor.<br>El conductor será alertado del riesgo de una posible colisión a través de una advertencia sonora y visual.<br>Si el conductor no responde, el sistema mejorará la capacidad de respuesta de frenado para actuar más rápidamente si el conductor frena.<br>Si aún no hay respuesta del conductor, los frenos se aplicarán automáticamente y se reducirá la velocidad del vehículo, intentando evitar una colisión.<br>El asistente de pre-colisión también cuenta con detección de peatones. Si el sistema detecta que es inminente una colisión con un paso de peatones delante del vehículo, aplicará automáticamente los frenos.<br>El sistema se activa automáticamente a velocidades entre 5 km/h y 80 km/h, sin que sea necesaria la intervención del conductor.<br>Podrás activar o desactivar el asistente de pre-colisión y ajustar la sensibilidad del sistema a través de SYNC® 4."
-          } 
-        }
-      ],
-      "materials": [
-{"class":"tpl-izq sombra top", "active":false, "order":1, "id": "station08_02",  "title": "", "subtitle": "<strong>¡ACTING PARA EL COPILOTO!</strong>", "text": "<ol><li>>Demostrá tus dotes actorales y distraé al piloto mientras conduce, contándole alguna anécdota que lo atraiga y disperse.</li><li>Descubran juntos lo que el azar les pone en frente.</li><li>Comprueben cómo el frenado autónomo, una vez más, ¡lo da todo!</li></ol><strong>FUNDAMENTAL:<br>¡No vale tocar el freno!</strong>", "type":"image", "url": "/stations/station08/slider_8_02.jpg"}
-      ]
-    },
-
 
     {
       "id": "09",
-      "title": "MISIÓN 9",
+      "title": "MISIÓN 8",
       "picture": "/stations/station09/slider_9_01.jpg",
-      "order": 9,"current": false,"completed": false, 
+      "order": 8,"current": false,"completed": false, 
       "subpages":[
         {"class":"tpl-default top", "id": "home_24",  
           "title": "<span class='text-shadow'>¡NO TE VAYAS AL PASTO!</span>", 
@@ -213,9 +190,9 @@
 
     {
       "id": "10",
-      "title": "MISIÓN 10",
+      "title": "MISIÓN 9",
       "picture": "/stations/station10/slider_10_01.jpg",
-      "order": 10,"current": false,"completed": false, 
+      "order": 9,"current": false,"completed": false, 
       "subpages":[
         {"class":"tpl-default top", "id": "home_26",  
           "title": "<span class='text-shadow'>SI NO LO VISTE, PERDISTE</span>", 
@@ -238,9 +215,9 @@
 
     {
       "id": "11",
-      "title": "MISIÓN 11",
+      "title": "MISIÓN 10",
       "picture": "/stations/station11/slider_11_01.jpg",
-      "order": 11,"current": false,"completed": false, 
+      "order": 10,"current": false,"completed": false, 
       "subpages":[
         {"class":"tpl-default sombra top", "id": "home_28",  
           "title": "<span class='text-shadow'>A TODO VOLUMEN</span>", 
@@ -258,9 +235,9 @@
 
     {
       "id": "12",
-      "title": "MISIÓN 12",
+      "title": "MISIÓN 11",
       "picture": "/stations/station12/slider_12_01.jpg",
-      "order": 12,"current": false,"completed": false, 
+      "order": 11,"current": false,"completed": false, 
       "subpages":[
         {"class":"tpl-default sombra top", "id": "home_28",  
           "title": "<span class='text-shadow'>VERSUS <span class='light'>Compará</span><br><span class='light'>motores y pisá</span> FUERTE</span>", 

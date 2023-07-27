@@ -92,9 +92,9 @@
           "id": "05_01",
           "question": "¿Qué dato de inclinación te salió en la pantalla todoterreno?",
           "options": [
-            {"id": "a","text": "Entre 75ª y 80ª.","correct": false},
-            {"id": "b","text": "Entre 15ª y 25ª.","correct": true},
-            {"id": "c","text": "Entre 6ª y 12ª.","correct": false}
+            {"id": "a","text": "Entre 75° y 80°.","correct": false},
+            {"id": "b","text": "Entre 15° y 25°.","correct": true},
+            {"id": "c","text": "Entre 6° y 12°.","correct": false}
           ],
           "order": 1,"current": false,"answer": null,"score": 10,"correct": null,"help": null
         }     
@@ -155,9 +155,9 @@
           "id": "08_01",
           "question": "¿A qué velocidades funciona el asistente de detección de peatones?",
           "options": [
-            {"id": "a","text": "Entre 5km/h y 80km/h.","correct": true},
-            {"id": "b","text": "Entre 0km/h y 5km/h.","correct": false},
-            {"id": "c","text": "Entre 80km/h y 120km/h.","correct": false}
+            {"id": "a","text": "Entre 5 km/h y 80 km/h.","correct": true},
+            {"id": "b","text": "Entre 0 km/h y 5 km/h.","correct": false},
+            {"id": "c","text": "Entre 80 km/h y 120 km/h.","correct": false}
           ],
           "order": 1,"current": false,"answer": null,"score": 10,"correct": null,"help": null
         }
@@ -237,11 +237,11 @@
       "questions": [
         {
           "id": "12_01",
-          "question": "¿Qué tiempo le toma a la Ranger V6 en acelerar hasta los 100km/h?",
+          "question": "¿Qué tiempo le toma a la Ranger V6 acelerar hasta los 100 km/h?",
           "options": [
-            {"id": "a","text": "11.4 Segundos","correct": false},
-            {"id": "b","text": "8.4 Segundos","correct": true},
-            {"id": "c","text": "10,7 Segundos","correct": false}
+            {"id": "a","text": "11.4 segundos.","correct": false},
+            {"id": "b","text": "8.4 segundos.","correct": true},
+            {"id": "c","text": "10.7 segundos.","correct": false}
           ],
           "order": 1,"current": false,"answer": null,"score": 10,"correct": null,"help": null
         }
