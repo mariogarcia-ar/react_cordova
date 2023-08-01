@@ -23,7 +23,7 @@ function Sidebar({show, handleClose}) {
      
     <Offcanvas className={isAdmin?'admin-mode':'user-mode'} show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-            <Offcanvas.Title>P703 FORD Academy v1.6.0 <ToggleButton 
+            <Offcanvas.Title>P703 FORD Academy v1.6.1 <ToggleButton 
                   id="toggle-check-admin"
                   variant="outline-danger"
                   type="checkbox"

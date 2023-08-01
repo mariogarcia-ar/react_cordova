@@ -250,6 +250,25 @@
 {"class":"tpl-izq sombra top sin-titulo","active":false,"order": 1,"id":"station12_01","position":"top","title": "","subtitle":"","text":"Los 5 Motores:<br><br>2.2L  160 CV y 385 NM<br>3.2L  200 CV y 470 NM<br><br>2.0L  Turbo   - 170 CV y 405NM<br>2.0L  Bi Turbo - 210 CV y 500NM<br>3.0L  Turbo - V6  250 CV y 600NM","type":"image","url": "/stations/station12/slider_12_01.jpg"},
 {"class":"tpl-default sombra top sin-titulo","active":false,"order": 2,"id":"station12_02","position":"top","title": "","subtitle":"","text":"Veamos qué puede hacer cada una:<br><br>a. Compará el motor 2.0L Turbo vs. el 2.2L<br>b. Compará el motor 2.0L Bi-Turbo vs. el 3.0L V6 vs el 3.2L","type":"image","url": "/stations/station12/slider_12_01.jpg"}
       ]
-    }
+    },
+
+    {
+      "id": "13",
+      "title": "MISIÓN 12",
+      "picture": "/stations/station13/slider_13_01.jpg",
+      "order": 12,"current": false,"completed": false, 
+      "subpages":[
+        {"class":"tpl-default sombra top", "id": "home_28",  
+          "title": "", 
+          "subtitle": "", 
+          "text": "", 
+          "type":"image", 
+          "url": "/stations/station13/slider_13_01.jpg"}        
+      ],
+      "materials": [
+{"class": "tpl-izq sombra top small","active": false,"order": 1,"id": "station13_01", "title": "","subtitle": "","text": "","type": "image","url": "/stations/station13/slider_13_02.jpg"}
+
+]
+    }    
   ]
 }
